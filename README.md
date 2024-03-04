@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# Agenda Kezuka Style's Professional's 
 
 `CURSO`
 
@@ -6,7 +6,7 @@
 
 `SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+A Agenda online do cliente Kezuka Style's facilitará muito a vida dos clientes podendo eles agendarem ou cancelarem seus horários e também fará simplificará a organização da agenda dos barbeiros e gerenciamentos de horários. 
 
 ## Integrantes
 
@@ -19,7 +19,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Orientador
 
-* Nome completo do professor 1
+* Joyce Christina de Paiva Carvalho
 
 ## Instruções de utilização
 
