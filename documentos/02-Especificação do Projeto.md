@@ -20,7 +20,7 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 
 A ilustração de como as tecnologias estão relacionadas e como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário, pode ser visualizada na figura abaixo:
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/06d9d248-a7d3-4bd9-8bfd-8e9a2df1f29b)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/26356962/2e3f1e4b-a3f9-4da1-9016-7515bca6a545)
 
 ## Project Model Canvas
 
