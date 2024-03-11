@@ -62,21 +62,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-005| A aplicação deve ser intuitiva para que o usuário consiga encontrar as informações que deseja facilmente |  ALTA | 
 |RNF-006| A aplicação deve utilizar senhas criptografadas 3s |  ALTA | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
@@ -87,12 +72,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |02| A plataforma deve se restringir às tecnologias básicas utilizando ferramentas de desenvolvimento pré-estabelecidas. |
 |03| A plataforma se compromete em não compartilhar históricos de pesquisa e dados sensíveis dos usuários. |
 |02| A equipe não pode subcontratar o desenvolvimento do trabalho. |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
