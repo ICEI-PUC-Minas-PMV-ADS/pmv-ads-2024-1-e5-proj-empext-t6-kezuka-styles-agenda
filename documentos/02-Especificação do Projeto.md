@@ -35,19 +35,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o cliente agende um horário, selecionando qual colaborador e quais serviços deseja realizar | ALTA | 
-|RF-002| Permitir que o cliente cancele um horário com até 24 horas; | ALTA |
-|RF-003| Permitir que o cliente se cadastre | MÉDIA |
+|RF-002| Permitir que o cliente cancele um horário com até 24 horas; | BAIXA |
+|RF-003| Permitir que o cliente se cadastre | ALTA |
 |RF-004| Permitir que o cliente recupere a senha; | MÉDIA |
-|RF-005| Permitir que o cliente faça login; | MÉDIA |
-|RF-006| Permitir que o gestor cadastre colaboradores; | MÉDIA |
-|RF-007| Permitir que o gestor caso precise recupere a sua senha "ADM" e senhas de colaboradores; | MÉDIA |
-|RF-008| Permitir que o gestor visualize as agendas dos colaboradores; | MÉDIA |
+|RF-005| Permitir que o cliente faça login; | ALTA |
+|RF-006| Permitir que o gestor cadastre colaboradores; | ALTA |
+|RF-007| Permitir que o gestor caso precise recupere a sua senha "ADM" e senhas de colaboradores; | BAIXA |
+|RF-008| Permitir que o gestor visualize as agendas dos colaboradores; | ALTA |
 |RF-009| Permitir que o gestor cadastre produtos e serviços no sistema; | MÉDIA |
-|RF-010| Permitir que o gestor configure porcentagem de comissões de produtos e serviços a seus colaboradores; | MÉDIA |
+|RF-010| Permitir que o gestor configure porcentagem de comissões de produtos e serviços a seus colaboradores; | ALTA |
 |RF-011| Permitir que o gestor cadastre produtos e serviços no sistema; | MÉDIA |
 |RF-012| Permitir que o gestor visualize histórico de atendimentos de seus colaboradores; | MÉDIA |
-|RF-013| Permitir que o colaborador faça login | MÉDIA |
-|RF-014| Permitir que o colaborador visualize sua agenda | MÉDIA |
+|RF-013| Permitir que o colaborador faça login | ALTA |
+|RF-014| Permitir que o colaborador visualize sua agenda | ALTA |
 |RF-015| Permitir que o gestor e colaborador configure as datas disponíveis e horários de atendimentos da semana.| MÉDIA |
 |RF-016| Permitir que o colaborador confirme o status do atendimento como "REALIZADO" ou "CANCELADO" | MÉDIA |
 
