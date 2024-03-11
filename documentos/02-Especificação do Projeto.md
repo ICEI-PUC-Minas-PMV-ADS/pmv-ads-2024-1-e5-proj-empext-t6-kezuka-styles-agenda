@@ -2,20 +2,21 @@
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Definição do problema e ideia de solução a partir da perspectiva do usuário.
 
 ## Arquitetura e Tecnologias
 
-|Função    | Tecnologia  | 
+|Nome    | Função  | 
 |------------|-----------------------------------------|
-| Linguagem | JavaScript | 
-| Framework | ReactNative | 
-| Bibliotecas | React Native Paper, React Navigation, Json server, Json server auth, Axios | 
-| IDE | Visual Studio Code | 
-| Ferramentas | Microsoft Teams, GitHub, Whatsapp | 
-| Banco de dados | SQL SERVER | 
+| Whatsapp, Teams | Comunicação entre a equipe; comunicação entre a equipe e o Product Owner do projeto. | 
+| Github | 	Repositório da documentação e código fonte do projeto; gerenciamento de funções e tarefas. | 
+| Git | 	Gestão do código fonte (versionamento). | 
+| Microsoft Visual Studio | Criação do código fonte. | 
+| Microsoft SQL Server | Criação e administração do banco de dados. | 
+| Lucidchart | Criação dos diagramas e modelos. | 
+| Marvel App | Projeto de interface e wireframes. | 
+| Bootstrap, ASP.NET Core MVC | Bibliotecas e framework utilizados. |
+| HTML, C#, CSS, JavaScript | Linguagens de programação utilizadas na criação do código fonte da aplicação. | 
 
 A ilustração de como as tecnologias estão relacionadas e como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário, pode ser visualizada na figura abaixo:
 
