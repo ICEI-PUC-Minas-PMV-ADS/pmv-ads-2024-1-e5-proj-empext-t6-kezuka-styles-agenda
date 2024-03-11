@@ -4,19 +4,19 @@ O Kezuka Style’s Professional’s é um salão e barbearia de Belo Horizonte M
 
 ## Problema
 
-Com uma boa demanda por atendimentos o salão & barbearia contando com alguns colaboradores, se faz necessário organizar melhor o agendamento de clientes e registro de atendimentos, comissões e a gestão da agenda individual do colaborador que hoje é feita usando planilha excel o que torna todo este fluxo mais díficil de controlar e atender ao mesmo tempo, com um sistema online poderemos trazer algumas formas de facilitar a vida dos clientes, colaboradores e gestor.
+Com uma demanda crescente por atendimentos, o salão e barbearia Kezuka Style's, que conta com uma equipe de colaboradores dedicados, precisa otimizar o agendamento de clientes, o registro de atendimentos e comissões, além da gestão individual das agendas dos profissionais. Atualmente, eles utilizam o WhatsApp e uma planilha do Excel para gerenciar esses processos, o que torna o fluxo de trabalho desafiador de controlar e atender simultaneamente. A implementação de um sistema online nos permitirá simplificar e aprimorar a experiência de clientes, colaboradores e gestores, criando uma agenda online eficiente.
 
 ## Objetivos
 
-Nosso objetivo é oferecer uma solução prática e intuitiva para que os clientes possam agendar seus procedimentos com o Salão Kezuka Style's. Além disso, buscamos proporcionar ao gestor e aos nossos colaboradores uma maneira eficiente de gerenciar suas agendas.
+Nosso objetivo é oferecer uma solução prática e intuitiva para que os clientes possam agendar seus procedimentos no Salão Kezuka Style’s. Além disso, buscamos proporcionar ao gestor e aos nossos colaboradores uma maneira eficiente de gerenciar suas agendas, garantindo um fluxo de trabalho mais organizado e produtivo.
 
 ## Justificativa
 
-Para alcançar esse objetivo, criaremos uma aplicação PWA (Progressive Web App) responsiva, que pode ser acessada tanto em dispositivos móveis quanto em desktops. Essa abordagem nos permite atender a um amplo público, independentemente do tipo de dispositivo utilizado. Para alcançar esse objetivo será desenvolvido uma aplicação PWA responsiva, que pode ser utilizada e instalada em dispositivos móveis e desktops, bem como uma API para comunicar com banco de dados.
+Para alcançar esse objetivo, desenvolveremos uma aplicação PWA (Progressive Web App) responsiva, que poderá ser acessada tanto em dispositivos móveis quanto em desktops. Essa abordagem nos permitirá atender a um amplo público, independentemente do tipo de dispositivo utilizado. A criação de uma API para comunicação com o banco de dados complementará essa solução, garantindo uma experiência completa e eficaz para todos os envolvidos.
 
 ## Relação com a Extensão Universitária
 
-É esperado que os clientes de Kezuka não tenham dificuldades em agendar procedimentos, assim também facilitando muito a visualização da agenda pelo gestor e colaboradores;
+No Kezuka Style’s Professional’s, nossa prioridade é garantir que os clientes tenham uma experiência tranquila ao agendar seus procedimentos. A implementação de um sistema de agendamento intuitivo não apenas beneficia os clientes, mas também simplifica a visualização da agenda para o gestor e os colaboradores.
 
 ## Descrição do Parceiro
 
