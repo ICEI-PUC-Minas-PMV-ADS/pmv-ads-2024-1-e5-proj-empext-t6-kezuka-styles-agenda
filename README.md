@@ -8,7 +8,7 @@
 
 `Eixo 5`
 
-A Agenda online do cliente Kezuka Style's facilitará muito a vida dos clientes podendo eles agendarem ou cancelarem seus horários e também simplificará a organização da agenda dos barbeiros e gerenciamentos de horários.
+A Agenda online do cliente Kezuka Style's facilitará muito a vida dos clientes podendo eles agendarem ou cancelarem seus horários e também simplificará a organização da agenda dos colaboradores e uma gerenciamento de horário eficiente.
 
 ## Integrantes
 
