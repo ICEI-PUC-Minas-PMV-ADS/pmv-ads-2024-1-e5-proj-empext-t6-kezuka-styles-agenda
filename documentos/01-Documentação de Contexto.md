@@ -1,10 +1,10 @@
 # Introdução
 
-O Kezuka Style’s Professional’s é um salão e barbearia de Belo Horizonte Minas Gerais, conhecidos também pela tradição no atendimento ao público infatil. Com mais de uma década de experiência, sua missão é realçar a beleza e a autoestima de seus clientes. Com uma demanda muito boa, se fez a necessidade de automatizar a gestão para que assim os profissionais e gestor possa focar no que realmente interessa que são os clientes bem atendidos, para isto se fez a necessidade de criar um sistema cujo o objetivo inicial é realizar uma gestão de agendamentos mais organizada para os interessados.
+O Kezuka Style’s Professional’s é um salão e barbearia de Belo Horizonte Minas Gerais, conhecidos também pela tradição no atendimento ao público infatil na região. Com mais de uma década de experiência, sua missão é realçar a beleza e a autoestima de seus clientes. Com uma demanda muito boa e o aumento das solicitações por serviços, se fez a necessidade de automatizar a gestão de agendamento para que assim os colaboradores e gestor possa focar no que realmente interessa que são os atendimentos, para isto se fez a necessidade de criar um sistema cujo o objetivo é realizar uma gestão de agendamentos mais organizada para o salão.
 
 ## Problema
 
-Com uma demanda crescente por atendimentos, o salão e barbearia Kezuka Style's, que conta com uma equipe de colaboradores dedicados, precisa otimizar o agendamento de clientes, o registro de atendimentos e comissões, além da gestão individual das agendas dos profissionais. Atualmente, eles utilizam o WhatsApp e uma planilha do Excel para gerenciar esses processos, o que torna o fluxo de trabalho desafiador de controlar e atender simultaneamente. A implementação de um sistema online nos permitirá simplificar e aprimorar a experiência de clientes, colaboradores e gestores, criando uma agenda online eficiente.
+Com uma demanda crescente por atendimentos, o salão e barbearia Kezuka Style's, que conta com uma equipe de colaboradores dedicados, sofre ao tentar otimizar de forma manual o agendamento de clientes, o registro de atendimentos e comissões, além da gestão individual das agendas dos profissionais. Atualmente, eles utilizam o WhatsApp e uma planilha do Excel para gerenciar estes processos, o que torna o fluxo de trabalho desafiador de controlar e ao mesmo tempo atender aos clientes simultaneamente. A implementação de um sistema online nos permitirá simplificar e aprimorar a experiência de seus clientes, colaboradores e gestores, criando uma agenda online eficiente.
 
 ## Objetivos
 
