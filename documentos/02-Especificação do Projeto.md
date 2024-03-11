@@ -12,7 +12,7 @@ o	Descreva brevemente a arquitetura definida para o projeto e as tecnologias a s
 
 ## Project Model Canvas
 
-Colocar a imagem do modelo construído apresentando a proposta de solução.
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/104144665/7dcf50c5-9eee-4db0-b02f-ebf92cd9a786)
 
 > **Links Úteis**:
 > Disponíveis em material de apoio do projeto
