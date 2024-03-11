@@ -8,6 +8,15 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Arquitetura e Tecnologias
 
+|Função    | Tecnologia  | 
+|------------|-----------------------------------------|
+| Linguagem | JavaScript | 
+| Framework | ReactNative | 
+| Bibliotecas | React Native Paper, React Navigation, Json server, Json server auth, Axios | 
+| IDE | Visual Studio Code | 
+| Ferramentas | Microsoft Teams, GitHub, Whatsapp | 
+| Banco de dados | SQL SERVER | 
+
 o	Descreva brevemente a arquitetura definida para o projeto e as tecnologias a serem utilizadas. Sugere-se a criação de um diagrama de componentes da solução.
 
 ## Project Model Canvas
