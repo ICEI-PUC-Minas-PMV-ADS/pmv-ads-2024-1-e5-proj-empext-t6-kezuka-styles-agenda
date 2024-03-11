@@ -13,7 +13,7 @@ A Agenda online do cliente Kezuka Style's facilitará muito a vida dos clientes 
 ## Integrantes
 
 * [Aaron Stiebler Carneiro da Silva](https://github.com/euaaron)
-* Arthur Emanoel Coelho de Paula
+* [Arthur Emanoel Coelho de Paula](https://github.com/ArthurCoelho25)
 * [Ayrles Alves de Lima Sales](https://github.com/Ayrlesales)
 * [Gabriel Nakhata Lopes Ruas Nhimi](https://github.com/gabrielnakhata)
 * [Khaio Henrique de Oliveira Camargo](https://github.com/khaiocamargos)
