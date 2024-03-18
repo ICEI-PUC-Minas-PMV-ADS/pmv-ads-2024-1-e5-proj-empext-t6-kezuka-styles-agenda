@@ -88,8 +88,11 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 ## Modelo ER (Projeto Conceitual)
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/72c40202-b403-48ac-9156-91463d8645e9"></img>
+x
 
 ## Projeto da Base de Dados
 
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/72c40202-b403-48ac-9156-91463d8645e9"></img>
+
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
+
