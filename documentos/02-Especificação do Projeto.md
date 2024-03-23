@@ -42,14 +42,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-006| Permitir que o gestor cadastre colaboradores; | ALTA |
 |RF-007| Permitir que o gestor caso precise recupere a sua senha "ADM" e senhas de colaboradores; | BAIXA |
 |RF-008| Permitir que o gestor visualize as agendas dos colaboradores; | ALTA |
-|RF-009| Permitir que o gestor cadastre produtos e serviços no sistema; | MÉDIA |
-|RF-010| Permitir que o gestor configure porcentagem de comissões de produtos e serviços a seus colaboradores; | ALTA |
-|RF-011| Permitir que o gestor cadastre produtos e serviços no sistema; | MÉDIA |
-|RF-012| Permitir que o gestor visualize histórico de atendimentos de seus colaboradores; | MÉDIA |
-|RF-013| Permitir que o colaborador faça login | ALTA |
-|RF-014| Permitir que o colaborador visualize sua agenda | ALTA |
-|RF-015| Permitir que o gestor e colaborador configure as datas disponíveis e horários de atendimentos da semana.| MÉDIA |
-|RF-016| Permitir que o colaborador confirme o status do atendimento como "REALIZADO" ou "CANCELADO" | MÉDIA |
+|RF-009| Permitir que o gestor cadastre serviços no sistema; | MÉDIA |
+|RF-010| Permitir que o gestor configure porcentagem de comissões de serviços a seus colaboradores; | ALTA |
+|RF-011| Permitir que o gestor visualize histórico de atendimentos de seus colaboradores; | MÉDIA |
+|RF-012| Permitir que o colaborador faça login | ALTA |
+|RF-013| Permitir que o colaborador visualize sua agenda | ALTA |
+|RF-014| Permitir que o gestor e colaborador configure as datas disponíveis e horários de atendimentos da semana.| MÉDIA |
+|RF-015| Permitir que o colaborador confirme o status do atendimento como "REALIZADO" ou "CANCELADO" | MÉDIA |
 
 ### Requisitos não Funcionais
 
@@ -59,8 +58,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-002| A aplicação deve processar requisições do usuário em no máximo 3s |  BAIXA | 
 |RNF-003| A aplicação deve ter bom nível de contraste entre os elementos da tela em conformidade |  BAIXA | 
 |RNF-004| A aplicação deve ser compatível com os navegadores mais utilizados do mercado |  MÉDIA | 
-|RNF-005| A aplicação deve ser intuitiva para que o usuário consiga encontrar as informações que deseja facilmente |  ALTA | 
-|RNF-006| A aplicação deve utilizar senhas criptografadas 3s |  ALTA | 
 
 ## Restrições
 
