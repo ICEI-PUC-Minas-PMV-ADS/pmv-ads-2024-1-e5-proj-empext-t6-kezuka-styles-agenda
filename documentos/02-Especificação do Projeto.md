@@ -89,7 +89,7 @@ x
 
 ## Projeto da Base de Dados
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/456ef5e5-ed37-4cdb-8ed8-389c7fd18b4e"></img>
+<img src="[https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/456ef5e5-ed37-4cdb-8ed8-389c7fd18b4e](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/71235aa9-77a2-46ba-8020-d87e25143ddb)"></img>
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
 
