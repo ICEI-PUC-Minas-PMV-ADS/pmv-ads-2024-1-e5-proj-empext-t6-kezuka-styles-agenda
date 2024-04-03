@@ -1,0 +1,7 @@
+@agenda_on_api_netcore_HostAddress = http://localhost:5199
+
+GET {{agenda_on_api_netcore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
