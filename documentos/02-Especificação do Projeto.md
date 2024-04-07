@@ -39,16 +39,16 @@ A ilustração de como as tecnologias estão relacionadas e como uma interação
 - **Objetivos:** Melhorar a eficiência do agendamento e gerenciamento do salão. Deseja liberar mais tempo para focar na qualidade do serviço ao cliente e na expansão do negócio.
 - **Desafios:** Lutar contra a desorganização causada pelo sistema atual de agendamentos via WhatsApp e Excel, o que muitas vezes resulta em duplas marcações e confusões.
 
-## Persona 2: Maria, a Profissional de Beleza
+## Persona 2: Carlos, o Barbeiro
 
-- **Nome:** Maria Silva
+- **Nome:** Carlos Silva
 - **Idade:** 33 anos
-- **Cargo:** Cabeleireira e maquiadora
+- **Cargo:** Barbeiro
 - **Localização:** Belo Horizonte, Minas Gerais
-- **Hobbies:** Ler sobre novas tendências de beleza e moda, assistir tutoriais de maquiagem.
-- **Tecnologia:** Está sempre conectada no seu smartphone, usando redes sociais para divulgar seu trabalho.
+- **Hobbies:** Sair com os amigos, ir a Workshops e assitir aulas de cursos online para aprender novas tecnicas de cortes.
+- **Tecnologia:** Está sempre conectado no seu smartphone, usando redes sociais para divulgar seu trabalho.
 - **Objetivos:** Quer organizar melhor seu tempo para atender mais clientes sem comprometer a qualidade dos serviços.
-- **Desafios:** Precisa de um sistema que lhe permita visualizar e gerenciar sua agenda de forma eficiente, além de acompanhar as comissões de forma transparente.
+- **Desafios:** - Precisa de um sistema que lhe permita visualizar e gerenciar sua agenda de forma eficiente.
 
 ## Persona 3: Carlos, o Cliente Regular
 
@@ -71,6 +71,43 @@ A ilustração de como as tecnologias estão relacionadas e como uma interação
 - **Tecnologia:** Busca soluções digitais que otimizem seu tempo, já que equilibra a maternidade com a carreira.
 - **Objetivos:** Precisa agendar cortes de cabelo e outros serviços de beleza para seus filhos de maneira conveniente e rápida.
 - **Desafios:** Enfrenta dificuldades para conciliar a agenda dos filhos com a disponibilidade dos serviços oferecidos pelo salão, além da preferência por um atendimento especializado para crianças.
+
+# Histórias de Usuário
+
+## História 1: Agendamento Online
+
+**Como** cliente do Salão Kezuka Style’s,  
+**Quero** poder agendar meus serviços online através de uma interface intuitiva,  
+**Para que** eu possa escolher o melhor horário sem a necessidade de ligar ou enviar mensagens.
+
+### Critérios de Aceitação:
+
+- A interface deve ser acessível via dispositivos móveis e desktops.
+- Deve ser possível visualizar a disponibilidade de horários em tempo real.
+- O sistema deve permitir a seleção de serviços específicos desejados.
+
+## História 2: Gerenciamento de Agenda para Profissionais
+
+**Como** profissional de beleza no Salão Kezuka Style’s,  
+**Quero** acessar e gerenciar minha agenda de agendamentos,  
+**Para que** eu possa organizar meu tempo de forma eficiente e estar preparado para os serviços agendados.
+
+### Critérios de Aceitação:
+
+- Os profissionais podem visualizar, adicionar, remover ou modificar agendamentos.
+- A agenda deve atualizar as disponibilidades em tempo real após cada agendamento.
+
+## História 3: Visualização e Gestão de Comissões
+
+**Como** profissional de beleza no Salão Kezuka Style’s,  
+**Quero** ter acesso a um sistema que me permita visualizar e gerenciar minhas comissões,  
+**Para que** eu possa ter clareza sobre minha renda e planejar financeiramente.
+
+### Critérios de Aceitação:
+
+- O sistema Deve permitir a visualização do histórico de serviços prestados e as comissões correspondentes.
+- O acesso às informações de comissão deve ser seguro e privado.
+
 
 
 ## Requisitos
