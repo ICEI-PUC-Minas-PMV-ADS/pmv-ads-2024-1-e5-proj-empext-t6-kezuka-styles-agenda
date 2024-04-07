@@ -26,6 +26,52 @@ A ilustração de como as tecnologias estão relacionadas e como uma interação
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/104144665/b99ea6e6-e642-44a4-a994-5b8911c50ffd)
 
+# Personas
+
+## Persona 1: João, o Gestor
+
+- **Nome:** João Oliveira
+- **Idade:** 45 anos
+- **Cargo:** Gestor do Salão Kezuka Style’s
+- **Localização:** Belo Horizonte, Minas Gerais
+- **Hobbies:** Jogar futebol nos finais de semana, viajar com a família.
+- **Tecnologia:** Utiliza smartphone e computador frequentemente, mas prefere soluções simples e intuitivas.
+- **Objetivos:** Melhorar a eficiência do agendamento e gerenciamento do salão. Deseja liberar mais tempo para focar na qualidade do serviço ao cliente e na expansão do negócio.
+- **Desafios:** Lutar contra a desorganização causada pelo sistema atual de agendamentos via WhatsApp e Excel, o que muitas vezes resulta em duplas marcações e confusões.
+
+## Persona 2: Maria, a Profissional de Beleza
+
+- **Nome:** Maria Silva
+- **Idade:** 33 anos
+- **Cargo:** Cabeleireira e maquiadora
+- **Localização:** Belo Horizonte, Minas Gerais
+- **Hobbies:** Ler sobre novas tendências de beleza e moda, assistir tutoriais de maquiagem.
+- **Tecnologia:** Está sempre conectada no seu smartphone, usando redes sociais para divulgar seu trabalho.
+- **Objetivos:** Quer organizar melhor seu tempo para atender mais clientes sem comprometer a qualidade dos serviços.
+- **Desafios:** Precisa de um sistema que lhe permita visualizar e gerenciar sua agenda de forma eficiente, além de acompanhar as comissões de forma transparente.
+
+## Persona 3: Carlos, o Cliente Regular
+
+- **Nome:** Carlos Pereira
+- **Idade:** 29 anos
+- **Profissão:** Advogado
+- **Localização:** Belo Horizonte, Minas Gerais
+- **Hobbies:** Corrida, jogos de tabuleiro com amigos.
+- **Tecnologia:** Utiliza tecnologia para todas as suas necessidades diárias, desde agendamentos até pedidos de comida.
+- **Objetivos:** Procura uma forma prática e rápida de agendar seus cortes de cabelo e serviços de barbearia, preferencialmente de seu smartphone.
+- **Desafios:** Encontra dificuldade em marcar horários devido à sua agenda lotada e ao sistema atual de agendamento do salão.
+
+## Persona 4: Lívia, a Mãe Atarefada
+
+- **Nome:** Lívia Rocha
+- **Idade:** 38 anos
+- **Profissão:** Empreendedora no ramo de alimentação saudável
+- **Localização:** Belo Horizonte, Minas Gerais
+- **Hobbies:** Yoga, cozinhar pratos saudáveis para a família.
+- **Tecnologia:** Busca soluções digitais que otimizem seu tempo, já que equilibra a maternidade com a carreira.
+- **Objetivos:** Precisa agendar cortes de cabelo e outros serviços de beleza para seus filhos de maneira conveniente e rápida.
+- **Desafios:** Enfrenta dificuldades para conciliar a agenda dos filhos com a disponibilidade dos serviços oferecidos pelo salão, além da preferência por um atendimento especializado para crianças.
+
 
 ## Requisitos
 
