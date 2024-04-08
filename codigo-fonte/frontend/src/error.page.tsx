@@ -1,6 +1,8 @@
 import { FaChevronLeft } from "react-icons/fa";
-import { Link, useRouteError } from "react-router-dom";
-import style from './error.module.scss'
+import { useRouteError } from "react-router-dom";
+import { ButtonLink } from "./shared/components/ButtonLink";
+
+import style from './Error.module.scss'
 
 declare interface ErrorType {
   data: string,
@@ -13,7 +15,7 @@ declare interface ErrorType {
   statusText: string
 }
 
-export default function ErrorPage() {
+export function ErrorPage() {
   const error: ErrorType | any = useRouteError();
 
   return (
@@ -32,7 +34,7 @@ export default function ErrorPage() {
           </p>
         </>
       )}
-      <Link to='/'><a className={style.backButton}><FaChevronLeft />Volte para o início</a></Link>
+      <ButtonLink to='/'><a className={style.backButton}><FaChevronLeft />Volte para o início</a></ButtonLink>
     </div>
   );
 }

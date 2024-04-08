@@ -13,19 +13,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+
+  &:hover {
+    color: #535bf2;
+  }
 }
-a:hover {
-  color: #535bf2;
-}
+
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
+  width: 100vw;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -45,24 +57,52 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+
+  &:hover {
+    border-color: #646cff;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
 }
-button:hover {
-  border-color: #646cff;
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+
+  @media(prefers-color-scheme: light) {
+    border-color: #2d2d2d;
+  }
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
+  }
+}
+
+// Animações
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

@@ -1,11 +1,25 @@
 import { createBrowserRouter } from "react-router-dom";
+
 import App from "./App";
-import ErrorPage from "./error.page";
+import { HomePage } from "./Home.page";
+import { ErrorPage } from "./Error.page";
+import { authRouter } from "./Auth/Auth.routes";
 
 export const mainRouter = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />
+      },
+      {
+        path: "user/:userId",
+        element: <p>Olá!</p>
+      },
+      ...authRouter
+    ]
   },
 ]);

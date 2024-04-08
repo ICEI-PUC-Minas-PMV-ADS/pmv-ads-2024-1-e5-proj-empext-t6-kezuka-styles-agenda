@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  >h1,
+  >strong {
+    text-transform: uppercase;
+  }
+
+  >small {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1rem;
+  }
+
+  >strong {
+    font-size: 2.5rem;
+  }
+}

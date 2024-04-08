@@ -1,10 +1,12 @@
-import './App.scss'
+import { Outlet } from 'react-router-dom'
+import { TopBar } from './Layout/TopBar/TopBar'
 
 function App() {
 
   return (
     <>
-      <h1 translate='no'>Kezuka Styles</h1>
+      <TopBar />
+      <Outlet />
     </>
   )
 }
