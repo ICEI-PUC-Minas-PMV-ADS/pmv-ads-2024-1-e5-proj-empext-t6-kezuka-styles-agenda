@@ -2,7 +2,7 @@ import { FaChevronLeft } from "react-icons/fa";
 import { useRouteError } from "react-router-dom";
 import { ButtonLink } from "./shared/components/ButtonLink";
 
-import style from './Error.module.scss'
+import style from './error.module.scss'
 
 declare interface ErrorType {
   data: string,
