@@ -13,10 +13,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+
 
     > a {
       text-transform: uppercase;
-      color: white;
+      color: rgb(0, 0, 0);
     }
     >div {
       position: relative;
@@ -35,7 +37,7 @@
   top: calc(.25rem + 50px);
 
   > a {
-    color: white;
+    color: rgb(37, 37, 37);
     text-transform: uppercase;
     border-radius: 0;
 
