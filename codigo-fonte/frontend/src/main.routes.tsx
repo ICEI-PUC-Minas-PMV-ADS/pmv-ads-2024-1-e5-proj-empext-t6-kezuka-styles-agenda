@@ -4,6 +4,9 @@ import App from "./App";
 import { HomePage } from "./Home.page";
 import { ErrorPage } from "./error.page";
 import { authRouter } from "./Auth/Auth.routes";
+import { servicosRouter } from "./Servicos/Servicos.routes";
+
+import SelectProfessionalPage from "./SelectProfessional/SelectProfessionalPage"
 
 export const mainRouter = createBrowserRouter([
   {
@@ -14,12 +17,17 @@ export const mainRouter = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />
+      },   
+      {
+        path: "select-professional",  
+        element: <SelectProfessionalPage />
       },
       {
-        path: "user/:userId",
+        path: "user/:userId", 
         element: <p>Olá!</p>
       },
-      ...authRouter
+      ...authRouter,  
+      ...servicosRouter
     ]
   },
 ]);
