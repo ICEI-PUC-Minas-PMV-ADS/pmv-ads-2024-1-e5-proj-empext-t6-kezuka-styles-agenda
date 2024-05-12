@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ServicoComponent from '../../shared/components/ServicoComponent';
 
-
 export function EditarServicos(){
 
   // Lista de serviços (suponha que você tenha essa lista)
@@ -26,6 +25,15 @@ export function EditarServicos(){
     setServicos(servicos.filter(servico => servico.servicoId !== servicoId));
   };
 
+  // Função para adicionar um novo serviço
+  const handleAdicionarServico = () => {
+    const novoServicoId = Math.max(...servicos.map(servico => servico.servicoId)) + 1;
+    setServicos([
+      ...servicos,
+      { servicoId: novoServicoId, nome: 'Novo Serviço', valor: 0 }
+    ]);
+  };
+
   return (
     <div>
       <h1>Editar Serviços</h1>
@@ -37,10 +45,11 @@ export function EditarServicos(){
             servico={servico}
             onUpdate={(novosDados: any) => handleUpdateServico(servico.servicoId, novosDados)}
             onExcluir={() => handleExcluirServico(servico.servicoId)}
-            
           />
         </div>
       ))}
+      {/* Botão para adicionar um novo serviço */}
+      <button onClick={handleAdicionarServico}>Adicionar Novo Serviço</button>
     </div>
   );
 };
