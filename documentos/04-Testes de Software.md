@@ -106,12 +106,16 @@ Critério de Êxito | Login de colaborador realizado com sucesso
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/2ec635c5-f232-4c68-b590-18f7c211faf2"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/928a208d-d9ea-4ffe-be94-c7593ca99074"></img>
 
+# Registro de disponibilidade
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/f5ae51fd-8f69-43e8-b20e-f2f0e9d07980"></img>
+
 # **Caso de teste**  **CT-01-Cadastro de Colaborador pelo Gestor**
 Requisito Associado **RF-006 - Permitir que o gestor cadastre colaboradores**
 Objetivo do Teste | Verificar o cadastro de colaboradores pelo gestor
 Critério de Êxito | Colaborador cadastrado com sucesso
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/f5ae51fd-8f69-43e8-b20e-f2f0e9d07980"></img>
+
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/d292b29d-d1cd-475d-9eb8-4d582a446969"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/fc2a31b1-1a97-4026-b127-6fce117682aa"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/75877c9c-5f88-4e09-8d68-c7defb6f199e"></img>
