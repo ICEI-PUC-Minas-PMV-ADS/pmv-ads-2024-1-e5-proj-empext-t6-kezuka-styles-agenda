@@ -74,18 +74,38 @@
 
 # Evidências de Testes de Software
 
-Apresente imagens e/ou vídeos que comprovam que um determinado teste foi executado, e o resultado esperado foi obtido. Normalmente são screenshots de telas, ou vídeos do software em funcionamento.
+# Página inicial do sistema
+**Caso de teste**  **CT-12-Login de Cliente**
+Requisito Associado **RF-005 - Permitir que o cliente faça login**
+Objetivo do Teste | Verificar login de cliente
+Critério de Êxito | Cliente cadastrado com sucesso
+
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/fafdc8c2-f995-4e77-91cd-21aa7244866f"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/96b3d2c1-8e46-44cd-afda-458e41d6a9f7"></img>
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/d11e4f61-d27a-43a2-bf46-25f8cb7e6e97"></img>
 
 # **Caso de teste**  **CT-01-Cadastro de Colaborador pelo Gestor**
 Requisito Associado **RF-006 - Permitir que o gestor cadastre colaboradores**
-Objetivo do Teste Verificar o cadastro de colaboradores pelo gestor
-Critério de Êxito Colaborador cadastrado com sucesso
+Objetivo do Teste | Verificar o cadastro de colaboradores pelo gestor
+Critério de Êxito | Colaborador cadastrado com sucesso
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/d11e4f61-d27a-43a2-bf46-25f8cb7e6e97"></img>
+
+# **Caso de teste** **CT-04-Login de colaborador**
+Requisito Associado RF-012 - Permitir que o colaborador faça login;
+Objetivo do Teste | Verificar login de colaborador
+Critério de Êxito | Login de colaborador realizado com sucesso
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/988d443c-1977-4d03-99b2-c8bb9aec6e6a"></img>
+
+# Menu do Gestor
+
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/c9669dad-4cd0-445c-b70e-5f7a45f1a86f"></img>
+
+# **Caso de teste** **CT-11-Cadastro de Cliente**
+Requisito Associado | RF-003 - Permitir que o cliente se cadastre;
+Objetivo do Teste | Verificar cadastro de cliente
+Critério de Êxito | Cliente cadastrado com sucesso
+
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/2ec635c5-f232-4c68-b590-18f7c211faf2"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/928a208d-d9ea-4ffe-be94-c7593ca99074"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/f5ae51fd-8f69-43e8-b20e-f2f0e9d07980"></img>
