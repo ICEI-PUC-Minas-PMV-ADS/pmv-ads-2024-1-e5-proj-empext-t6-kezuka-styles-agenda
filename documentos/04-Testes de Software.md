@@ -81,6 +81,7 @@ Apresente imagens e/ou vídeos que comprovam que um determinado teste foi execut
 |Requisito Associado |  RF-006 - Permitir que o gestor cadastre colaboradores | 
 | Objetivo do Teste 	| Verificar o cadastro de colaboradores pelo gestor| 
 |Critério de Êxito | Colaborador cadastrado com sucesso|
+|  |  |
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/96b3d2c1-8e46-44cd-afda-458e41d6a9f7"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/1df1aea6-d797-420b-9155-a3370efbc86d"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/d11e4f61-d27a-43a2-bf46-25f8cb7e6e97"></img>
