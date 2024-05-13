@@ -136,5 +136,11 @@ Critério de Êxito | Serviço cadastrado com sucesso
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/0fd1f4c2-3a5f-4685-9778-42d32b9e976a"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/25acb82a-116b-42fa-a79c-f3bb8304fd69"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/aa8cfbc2-4d2f-4f86-b096-a4ecb89db230"></img>
+
+# **Caso de teste** **CT-09-Configuração de porcentagens pelo gestor**
+Requisito Associado | RF-010 - Permitir que o gestor configure porcentagem de comissões de serviços a seus colaboradores
+Objetivo do Teste | Verificar configuração de porcentagem pelo gestor
+Critério de Êxito | Porcentagem adicionadas a um colaborador.
+
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/046c809f-4567-4b43-8b55-87fb5d763820"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/a820a420-9a77-40be-86da-3967a1f62ecb"></img>
