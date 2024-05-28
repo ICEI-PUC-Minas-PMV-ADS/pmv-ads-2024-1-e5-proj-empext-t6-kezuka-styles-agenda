@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { Calendar } from 'primereact/calendar';
-import usePrimeReactLocale from '../hooks/usePrimeReactLocale';
+import usePrimeReactLocale from '../../hooks/usePrimeReactLocale';
 import { Flex, Box, VStack, useToast, Select, Table, TableContainer, Thead, Tbody, Tr, Th, Td, IconButton, Icon, Button } from '@chakra-ui/react';
 import { TimeIcon, DeleteIcon, AddIcon } from '@chakra-ui/icons';
-import TitleSection from '../components/layout/TitleSection';
+import TitleSection from '../../components/layout/TitleSection';
 import { useNavigate } from 'react-router-dom';
-import { registerCalendar } from '../services/serviceCalendar';
-import { useAuth } from '../contexts/AuthContext';
-import { getCollaborators } from '../services/collaboratorService';
-import ActionButtons from '../components/layout/ActionButtons';
+import { registerCalendar } from '../../services/serviceCalendar';
+import { useAuth } from '../../contexts/AuthContext';
+import { getCollaborators } from '../../services/collaboratorService';
+import ActionButtons from '../../components/layout/ActionButtons';
 
 const DisponibilidadeCalendario = () => {
     usePrimeReactLocale();
@@ -57,10 +57,10 @@ const DisponibilidadeCalendario = () => {
             }
             return;
         }
-    
+
         const date = new Date(selectedDate);
         date.setHours(selectedHour.getHours(), selectedHour.getMinutes(), 0, 0);
-    
+
         if (scheduleList.some(item => new Date(item.dataHoraConfigurada).getTime() === date.getTime())) {
             toast({
                 title: "Erro de validação",
@@ -71,7 +71,7 @@ const DisponibilidadeCalendario = () => {
             });
             return;
         }
-    
+
         const offset = date.getTimezoneOffset() * 60000;
         const localISOTime = (new Date(date.getTime() - offset)).toISOString().slice(0, -1);
         const newSchedule = {
@@ -79,10 +79,10 @@ const DisponibilidadeCalendario = () => {
             gestorId: user.id,
             colaboradorId: selectedCollaboratorId
         };
-    
+
         setScheduleList((prev) => [...prev, newSchedule]);
         setSelectedHour(null);
-    
+
         setIsAdding(true);
         toast({
             title: "Horário Adicionado",

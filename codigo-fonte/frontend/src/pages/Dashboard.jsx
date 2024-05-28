@@ -1,8 +1,8 @@
 import { Box, Image, Center, Flex } from '@chakra-ui/react';
-import Header from '../components/common/MenuColaborador';
+import Header from '../components/common/MenuGestor';
 import Footer from '../components/common/Footer';
 
-const DashboardColaborador = () => {
+const Dashboard = () => {
   return (
     <Flex direction="column" minH="100vh" bg="#fff" w="100vw" m="0" p="0" overflowX="hidden">
       <Header />
@@ -35,5 +35,5 @@ const DashboardColaborador = () => {
   );
 };
 
-export default DashboardColaborador;
+export default Dashboard;
 

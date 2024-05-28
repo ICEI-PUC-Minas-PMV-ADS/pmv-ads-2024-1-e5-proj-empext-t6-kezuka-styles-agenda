@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import { Calendar } from 'primereact/calendar';
-import usePrimeReactLocale from '../hooks/usePrimeReactLocale';
-import { ChakraProvider, Flex, Box, VStack, useToast, Select } from '@chakra-ui/react';
-import TitleSection from '../components/layout/TitleSection';
-import DataGridCalendario from '../components/common/DataGridCalendario';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
-import { getCollaborators } from '../services/collaboratorService';
-import { getCalendarForCollaborator, deleteCalendar } from '../services/serviceCalendar';
-import ActionButtons from '../components/layout/ActionButtons';
+import { ChakraProvider, Flex, Box, VStack, useToast, Select } from '@chakra-ui/react';
+
+import { useAuth } from '../../contexts/AuthContext';
+import TitleSection from '../../components/layout/TitleSection';
+import usePrimeReactLocale from '../../hooks/usePrimeReactLocale';
+import ActionButtons from '../../components/layout/ActionButtons';
+import { getCollaborators } from '../../services/collaboratorService';
+import DataGridCalendario from '../../components/common/DataGridCalendario';
+import { getCalendarForCollaborator, deleteCalendar } from '../../services/serviceCalendar';
 
 const FiltrarDisponibilidadeColaborador = () => {
     usePrimeReactLocale();
@@ -58,7 +59,7 @@ const FiltrarDisponibilidadeColaborador = () => {
                 });
         }
     }, [selectedCollaboratorId, selectedDate, token, toast]);
-    
+
     const handleClose = () => {
         navigate('/dashboard');
     };
@@ -84,7 +85,7 @@ const FiltrarDisponibilidadeColaborador = () => {
           });
         }
       };
-    
+
 
       return (
         <Flex direction="column" minH="100vh" align="center" justify="center" bgGradient="linear(180deg, #3D5A73, #182625)" w="100vw" m="0" p="0" overflowX="hidden">
@@ -110,7 +111,7 @@ const FiltrarDisponibilidadeColaborador = () => {
                     <ChakraProvider>
                         <DataGridCalendario data={data} onDelete={handleDelete} />
                     </ChakraProvider>
-                   
+
                     <ActionButtons onBack={handleClose} onSave={null} isSaveDisabled={null} />
                 </VStack>
             </Box>

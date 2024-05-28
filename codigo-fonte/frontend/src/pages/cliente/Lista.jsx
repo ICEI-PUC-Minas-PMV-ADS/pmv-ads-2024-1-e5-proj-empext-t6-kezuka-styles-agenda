@@ -1,19 +1,20 @@
 import { useEffect, useState } from 'react';
-import { HStack, ChakraProvider, Flex, Box, Button, useToast } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import DataGridClient from '../components/common/DataGridClient';
-import TitleSection from '../components/layout/TitleSection';
-import { getClient } from '../services/clientService';
-import { useAuth } from '../contexts/AuthContext';
+import { HStack, ChakraProvider, Flex, Box, Button, useToast } from '@chakra-ui/react';
+
+import DataGridClient from '../../components/common/DataGridPeople';
+import TitleSection from '../../components/layout/TitleSection';
+import { getClient } from '../../services/clientService';
+import { useAuth } from '../../contexts/AuthContext';
 
 const ListaCliente = () => {
   const { token } = useAuth();
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize] = useState(8);
   const [totalPages, setTotalPages] = useState(1);
-  const toast = useToast();
+  const [pageSize] = useState(8);
   const navigate = useNavigate();
+  const toast = useToast();
 
   const loadClients = (page) => {
     getClient(token, page, pageSize)

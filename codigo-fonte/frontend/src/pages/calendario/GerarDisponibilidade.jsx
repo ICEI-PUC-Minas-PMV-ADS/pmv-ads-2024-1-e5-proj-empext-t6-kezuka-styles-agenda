@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { Calendar } from 'primereact/calendar';
-import usePrimeReactLocale from '../hooks/usePrimeReactLocale';
+import usePrimeReactLocale from '../../hooks/usePrimeReactLocale';
 import { Flex, Box, VStack, useToast, Select, Table, TableContainer, Thead, Tbody, Tr, Th, Td, IconButton, Icon, Button } from '@chakra-ui/react';
 import { TimeIcon, DeleteIcon, AddIcon } from '@chakra-ui/icons';
-import TitleSection from '../components/layout/TitleSection';
+import TitleSection from '../../components/layout/TitleSection';
 import { useNavigate } from 'react-router-dom';
-import { registerCalendar } from '../services/serviceCalendar';
-import { useAuth } from '../contexts/AuthContext';
-import { getCollaborators } from '../services/collaboratorService';
-import ActionButtons from '../components/layout/ActionButtons';
+import { registerCalendar } from '../../services/serviceCalendar';
+import { useAuth } from '../../contexts/AuthContext';
+import { getCollaborators } from '../../services/collaboratorService';
+import ActionButtons from '../../components/layout/ActionButtons';
 
 const GerarDisponibilidadeCalendario = () => {
     usePrimeReactLocale();
@@ -57,7 +57,7 @@ const GerarDisponibilidadeCalendario = () => {
             });
             return;
         }
-    
+
         // Convertendo o intervalo de timeInterval (que é um objeto Date) para minutos
         const intervalMinutes = timeInterval.getHours() * 60 + timeInterval.getMinutes();
         if (intervalMinutes <= 0) {
@@ -70,7 +70,7 @@ const GerarDisponibilidadeCalendario = () => {
             });
             return;
         }
-    
+
         const schedules = [];
         let currentTime = new Date(selectedDate);
         currentTime.setHours(startWorkTime.getHours(), startWorkTime.getMinutes(), 0, 0);
@@ -80,7 +80,7 @@ const GerarDisponibilidadeCalendario = () => {
         lunchStartTime.setHours(startLunchTime.getHours(), startLunchTime.getMinutes(), 0, 0);
         const lunchEndTime = new Date(selectedDate);
         lunchEndTime.setHours(endLunchTime.getHours(), endLunchTime.getMinutes(), 0, 0);
-    
+
         while (currentTime < endTime) {
             if (!(currentTime >= lunchStartTime && currentTime < lunchEndTime)) {
                 const formattedDateTime = `${currentTime.toLocaleDateString('en-CA')}T${currentTime.toLocaleTimeString('en-GB', { hour12: false })}`;
@@ -92,9 +92,9 @@ const GerarDisponibilidadeCalendario = () => {
             }
             currentTime = new Date(currentTime.getTime() + intervalMinutes * 60000); // Incrementa o tempo baseado no intervalo
         }
-    
+
         setScheduleList(schedules);
-    
+
         setIsAdding(true);
         toast({
             title: "Horários Gerados",
@@ -105,7 +105,7 @@ const GerarDisponibilidadeCalendario = () => {
             onCloseComplete: () => setIsAdding(false)
         });
     };
-    
+
 
     const handleRemoveSchedule = index => {
         const newScheduleList = scheduleList.filter((_, i) => i !== index);

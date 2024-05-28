@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { HStack, ChakraProvider, Flex, Box, useToast } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import DataGridPeople from '../components/common/DataGridPeople';
-import TitleSection from '../components/layout/TitleSection';
-import { getCollaborators, deleteCollaborator } from '../services/collaboratorService';
-import { useAuth } from '../contexts/AuthContext';
+import { HStack, ChakraProvider, Flex, Box, useToast } from '@chakra-ui/react';
+
+import TitleSection from '../../components/layout/TitleSection';
+import DataGridPeople from '../../components/common/DataGridPeople';
+import { getCollaborators, deleteCollaborator } from '../../services/collaboratorService';
+import { useAuth } from '../../contexts/AuthContext';
 
 const ListaColaboradores = () => {
   const { token } = useAuth();
