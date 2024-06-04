@@ -62,7 +62,7 @@ function ModalLogin() {
                     navigate('/dashboard-colaborador');
                     break;
                 case 'Cliente':
-                    navigate('/cadastro-cliente');
+                    navigate('/dashboard-cliente');
                     break;
                 default:
                     navigate('/');

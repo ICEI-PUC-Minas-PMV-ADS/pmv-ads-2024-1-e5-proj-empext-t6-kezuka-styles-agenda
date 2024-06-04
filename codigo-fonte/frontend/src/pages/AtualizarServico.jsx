@@ -1,20 +1,21 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Flex, Box, VStack, useToast } from '@chakra-ui/react';
-
-import CustomInput from '../../components/layout/CustomInput';
-import TitleSection from '../../components/layout/TitleSection';
-import ActionButtons from '../../components/layout/ActionButtons';
-import { updateService } from '../../services/serviceService';
-import { useAuth } from '../../contexts/AuthContext';
+import CustomInput from '../components/layout/CustomInput';
+import TitleSection from '../components/layout/TitleSection';
+import { updateService } from '../services/serviceService';
+import { useAuth } from '../contexts/AuthContext'; 
+import ActionButtons from '../components/layout/ActionButtons';
+import { useUserRedirect } from "../hooks/UseUserRedirect";
 
 const AtualizarServico = () => {
-    const { token } = useAuth();
+    const { token } = useAuth(); 
     const toast = useToast();
     const location = useLocation();
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const service = location.state.service;
+    const { redirectToDashboard } = useUserRedirect();
 
     const [formData, setFormData] = useState({
         servicoId: '',
@@ -27,7 +28,7 @@ const AtualizarServico = () => {
             setFormData({
                 servicoId: service.servicoId,
                 nome: service.nome,
-                valor: service.valor,
+                valor: service.valor.toString(), // Converte valor para string aqui
             });
         }
     }, [service]);
@@ -41,7 +42,7 @@ const AtualizarServico = () => {
     };
 
     const handleClose = () => {
-        navigate('/dashboard');
+        redirectToDashboard();
     };
 
     const handleSubmit = async (e) => {

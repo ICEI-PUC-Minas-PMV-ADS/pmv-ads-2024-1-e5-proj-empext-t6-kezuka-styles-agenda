@@ -6,6 +6,7 @@ import TitleSection from '../components/layout/TitleSection';
 import { updateCommission } from '../services/commissionService';
 import { useAuth } from '../contexts/AuthContext';
 import ActionButtons from '../components/layout/ActionButtons'; 
+import { useUserRedirect } from "../hooks/UseUserRedirect";
 
 const AtualizarComissoes = () => {
     const { token } = useAuth();
@@ -13,7 +14,8 @@ const AtualizarComissoes = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const commission = location.state.commission; // Confirme que o estado contém a comissão
+    const commission = location.state.commission;
+    const { redirectToDashboard } = useUserRedirect();
 
     const [formData, setFormData] = useState({
         comissaoId: 0,
@@ -44,7 +46,7 @@ const AtualizarComissoes = () => {
     };
 
     const handleClose = () => {
-        navigate('/dashboard');
+        redirectToDashboard();
     };
 
     const handleSubmit = async (e) => {
@@ -89,7 +91,7 @@ const AtualizarComissoes = () => {
 
     return (
         <Flex direction="column" minH="100vh" align="center" justify="center" bgGradient="linear(180deg, #455559, #182625)" w="100vw" m="0" p="0" overflowX="hidden">
-            <TitleSection title="Atualizar Comissão" subtitle="Formulário para atualização de comissões." />
+            <TitleSection title="Comissão" subtitle="Atualização de comissão" />
             <Box bg="#fff" p={5} shadow="md" borderWidth="1px" borderRadius="md" w={['100%', '100%', '50%']} maxWidth="960px" marginX="auto" marginTop="2rem" marginBottom="2rem" mt="1rem">
                 <form onSubmit={handleSubmit}>
                     <VStack spacing={4}>

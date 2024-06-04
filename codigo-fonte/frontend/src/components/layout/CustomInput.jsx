@@ -1,18 +1,18 @@
-import { FormControl, FormLabel, Input, useColorModeValue } from '@chakra-ui/react';
+import { FormControl, Input } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
-const CustomInput = ({ label, name, type = 'text', placeholder, onChange, value }) => {
-    const inputTextColor = useColorModeValue('teal', 'gray.200');
+const CustomInput = ({ name, type = 'text', placeholder, onChange, value }) => {
     return (
         <FormControl isRequired>
-            <FormLabel htmlFor={name}>{label}</FormLabel>
             <Input
-                id={name}h
+                id={name}
+                fontSize="18px"
+                color="#3D5A73"
+                fontWeight="bold"
                 name={name}
                 type={type}
                 placeholder={placeholder}
                 size='lg'
-                color={inputTextColor}
                 _placeholder={{ color: 'inherit' }}
                 value={value}
                 onChange={onChange}

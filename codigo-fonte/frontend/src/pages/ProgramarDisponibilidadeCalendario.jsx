@@ -1,25 +1,25 @@
 import { useState, useEffect } from "react";
 import { Calendar } from 'primereact/calendar';
-import usePrimeReactLocale from '../../hooks/usePrimeReactLocale';
-import { Flex, Box, VStack, useToast, Select, Table, TableContainer, Thead, Tbody, Tr, Th, Td, IconButton, Icon, Button } from '@chakra-ui/react';
-import { TimeIcon, DeleteIcon, AddIcon } from '@chakra-ui/icons';
-import TitleSection from '../../components/layout/TitleSection';
-import { useNavigate } from 'react-router-dom';
-import { registerCalendar } from '../../services/serviceCalendar';
-import { useAuth } from '../../contexts/AuthContext';
-import { getCollaborators } from '../../services/collaboratorService';
-import ActionButtons from '../../components/layout/ActionButtons';
+import usePrimeReactLocale from '../hooks/usePrimeReactLocale';
+import { Flex, Box, VStack, useToast, Select, Icon, Button, ChakraProvider } from '@chakra-ui/react';
+import { AddIcon } from '@chakra-ui/icons';
+import TitleSection from '../components/layout/TitleSection';
+import DataGridCalendario from '../components/common/DataGridCalendario';
+import { registerCalendar } from '../services/calendarService';
+import { useAuth } from '../contexts/AuthContext';
+import { getCollaborators } from '../services/collaboratorService';
+import ActionButtons from '../components/layout/ActionButtons';
+import { useUserRedirect } from "../hooks/UseUserRedirect";
+import { ScrollTop } from 'primereact/scrolltop';
 
-const GerarDisponibilidadeCalendario = () => {
+const ProgramarDisponibilidadeCalendario = () => {
     usePrimeReactLocale();
     const { token, user } = useAuth();
     const toast = useToast();
-    const navigate = useNavigate();
     const [collaborators, setCollaborators] = useState([]);
-    const [selectedDate, setSelectedDate] = useState(null);
+    const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedCollaboratorId, setSelectedCollaboratorId] = useState('');
     const [isAdding, setIsAdding] = useState(false);
-
     const [startWorkTime, setStartWorkTime] = useState(null);
     const [endWorkTime, setEndWorkTime] = useState(null);
     const [startLunchTime, setStartLunchTime] = useState(null);
@@ -27,6 +27,8 @@ const GerarDisponibilidadeCalendario = () => {
     const [timeInterval, setTimeInterval] = useState(null);
     const [scheduleList, setScheduleList] = useState([]);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const { redirectToDashboard } = useUserRedirect();
+    const [containerHeight] = useState('300px');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -46,6 +48,11 @@ const GerarDisponibilidadeCalendario = () => {
         fetchData();
     }, [token, toast]);
 
+    const handleRemoveSchedule = calendarioId => {
+        const newScheduleList = scheduleList.filter(item => item.calendarioId !== calendarioId);
+        setScheduleList(newScheduleList);
+    };
+
     const handleGenerateSchedules = () => {
         if (!selectedCollaboratorId || !selectedDate || !startWorkTime || !endWorkTime || !startLunchTime || !endLunchTime || !timeInterval) {
             toast({
@@ -58,7 +65,6 @@ const GerarDisponibilidadeCalendario = () => {
             return;
         }
 
-        // Convertendo o intervalo de timeInterval (que é um objeto Date) para minutos
         const intervalMinutes = timeInterval.getHours() * 60 + timeInterval.getMinutes();
         if (intervalMinutes <= 0) {
             toast({
@@ -84,32 +90,28 @@ const GerarDisponibilidadeCalendario = () => {
         while (currentTime < endTime) {
             if (!(currentTime >= lunchStartTime && currentTime < lunchEndTime)) {
                 const formattedDateTime = `${currentTime.toLocaleDateString('en-CA')}T${currentTime.toLocaleTimeString('en-GB', { hour12: false })}`;
+                const calendarioId = Math.floor(Math.random() * 1000);
                 schedules.push({
+                    calendarioId: calendarioId,
                     dataHoraConfigurada: formattedDateTime,
                     gestorId: user.id,
                     colaboradorId: parseInt(selectedCollaboratorId, 10)
                 });
             }
-            currentTime = new Date(currentTime.getTime() + intervalMinutes * 60000); // Incrementa o tempo baseado no intervalo
+            currentTime = new Date(currentTime.getTime() + intervalMinutes * 60000);
         }
 
         setScheduleList(schedules);
 
         setIsAdding(true);
         toast({
-            title: "Horários Gerados",
-            description: "Os horários foram gerados com sucesso, excluindo o período de almoço.",
-            status: "success",
-            duration: 2000,
+            title: "Horários Programados",
+            description: "Os horários foram gerados com sucesso!",
+            status: "info",
+            duration: 3000,
             isClosable: true,
             onCloseComplete: () => setIsAdding(false)
         });
-    };
-
-
-    const handleRemoveSchedule = index => {
-        const newScheduleList = scheduleList.filter((_, i) => i !== index);
-        setScheduleList(newScheduleList);
     };
 
     const handleSubmit = async () => {
@@ -118,12 +120,12 @@ const GerarDisponibilidadeCalendario = () => {
         try {
             await registerCalendar(scheduleList, token);
             toast({
-                title: "Disponibilidade cadastrada",
+                title: "Horários cadastrados",
                 description: "Os horários foram cadastrados com sucesso.",
                 status: "success",
                 duration: 2500,
                 isClosable: true,
-                onCloseComplete: () => navigate('/dashboard')
+                onCloseComplete: () => { redirectToDashboard(); }
             });
         } catch (error) {
             toast({
@@ -131,7 +133,7 @@ const GerarDisponibilidadeCalendario = () => {
                 description: error.message || "Não foi possível cadastrar a disponibilidade.",
                 status: "error",
                 duration: 3000,
-                isClosable: true
+                isClosable: true,
             });
         } finally {
             setIsSubmitting(false);
@@ -139,12 +141,12 @@ const GerarDisponibilidadeCalendario = () => {
     };
 
     const handleClose = () => {
-        navigate('/dashboard');
+        redirectToDashboard();
     };
 
     return (
         <Flex direction="column" minH="100vh" align="center" justify="center" bgGradient="linear(180deg, #3D5A73, #182625)" w="100vw" m="0" p="0" overflowX="hidden">
-            <TitleSection title="Gerar Disponibilidade" subtitle="Formulário para gerar disponibilidades para colaborador." />
+            <TitleSection title="Disponibilidade" subtitle="Programar disponibilidade, horários do dia" />
             <Box bg="#fff" p={5} shadow="md" borderWidth="1px" borderRadius="md" w={['100%', '100%', '50%']} maxWidth="960px" marginX="auto" marginTop="2rem" marginBottom="2rem" mt="1rem">
                 <VStack spacing={4}>
                     <div className="card flex flex-wrap gap-3 p-fluid">
@@ -221,35 +223,12 @@ const GerarDisponibilidadeCalendario = () => {
                             </Button>
                         </div>
                     </div>
-
-                    <TableContainer paddingY="7">
-                        <Table variant='simple'>
-                            <Thead>
-                                <Tr>
-                                    <Th fontSize="14px" color="#3D5A73" fontWeight="bold" alignItems="left">Data</Th>
-                                    <Th fontSize="14px" color="#3D5A73" fontWeight="bold" alignItems="left">Hora</Th>
-                                    <Th></Th>
-                                </Tr>
-                            </Thead>
-                            <Tbody>
-                                {scheduleList.map((item, index) => {
-                                    const date = new Date(item.dataHoraConfigurada);
-                                    return (
-                                        <Tr key={index}>
-                                            <Td fontSize="18px" color="#3D5A73" fontWeight="bold" alignItems="center">
-                                                <Icon as={TimeIcon} color="green" mr="4" boxSize="6" alignItems="center" />
-                                                {date.toLocaleDateString()}
-                                            </Td>
-                                            <Td fontSize="18px" color="#3D5A73" fontWeight="bold" alignItems="center">{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Td>
-                                            <Td alignItems="center">
-                                                <IconButton size="sm" colorScheme="red" aria-label="Delete schedule" icon={<DeleteIcon />} onClick={() => handleRemoveSchedule(index)} />
-                                            </Td>
-                                        </Tr>
-                                    );
-                                })}
-                            </Tbody>
-                        </Table>
-                    </TableContainer>
+                    <ChakraProvider>
+                        <Box w={{ base: '100%', md: '70%' }} height={containerHeight} overflow="auto" position="relative">
+                            <DataGridCalendario data={scheduleList} onDelete={handleRemoveSchedule} />
+                            <ScrollTop target="parent" threshold={100} className="w-2rem h-2rem border-round bg-primary" icon="pi pi-arrow-up text-base" />
+                        </Box>
+                    </ChakraProvider>
                     <ActionButtons onBack={handleClose} onSave={handleSubmit} isSaveDisabled={scheduleList.length === 0 || isSubmitting} />
                 </VStack>
             </Box>
@@ -257,4 +236,4 @@ const GerarDisponibilidadeCalendario = () => {
     );
 };
 
-export default GerarDisponibilidadeCalendario;
+export default ProgramarDisponibilidadeCalendario;

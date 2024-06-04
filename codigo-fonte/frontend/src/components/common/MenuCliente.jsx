@@ -25,7 +25,7 @@ import { HamburgerIcon, ArrowBackIcon, ChevronDownIcon } from '@chakra-ui/icons'
 import { Link as RouterLink } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 
-const MenuColaborador = () => {
+const MenuCliente = () => {
     const toast = useToast();
     const { isOpen, onToggle, onClose } = useDisclosure();
     const { user, logout } = useAuth();
@@ -44,7 +44,7 @@ const MenuColaborador = () => {
     };
 
     return (
-        <Box px={10} py={3} boxShadow="md" w="100%" bg="#173937">
+        <Box px={10} py={3} boxShadow="md" w="100%" bg="#2D2654">
             <Flex justify="space-between" align="center" w="100%">
                 <HStack spacing={4}>
                     <Avatar name={user?.nome || 'No Name'} src={user?.image || 'https://fallback-url.com/default-avatar.png'} mr={2} />
@@ -69,7 +69,7 @@ const MenuColaborador = () => {
                 size="xs"
             >
                 <DrawerOverlay />
-                <DrawerContent bg="#173937">
+                <DrawerContent bg="#221D40">
                     <DrawerCloseButton color="white" />
                     <DrawerBody>
                         <Flex direction="column" paddingTop={20} align="center" mt={4}>
@@ -79,7 +79,7 @@ const MenuColaborador = () => {
 
                             <Flex direction="column" mt="50px" align="center" w="100%">
 
-                                <RouterLink to="/disponibilidade-calendario" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
+                                <RouterLink to="/agendamento" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
                                     <Button color="white" bg="green" _hover={{ bg: "#2A542B" }} mb={4} py={8} w="full" justifyContent="space-between">
                                         <i className="pi pi-clock" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Agendar
                                     </Button>
@@ -97,45 +97,9 @@ const MenuColaborador = () => {
                                             </RouterLink>
                                         </MenuItem>
                                         <MenuItem bg="#3D5A90">
-                                            <RouterLink to="/lista-colaborador" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
-                                                <Button color="white" bg="#172237" _hover={{ bg: "#3D5A90" }} mb={0} py={6} w="full" justifyContent="space-between">
-                                                    <i className="pi pi-users" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Colaboradores
-                                                </Button>
-                                            </RouterLink>
-                                        </MenuItem>
-                                        <MenuItem bg="#3D5A90">
-                                            <RouterLink to="/lista-comissao" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
-                                                <Button color="white" bg="#172237" _hover={{ bg: "#3D5A90" }} mb={0} py={6} w="full" justifyContent="space-between">
-                                                    <i className="pi pi-list-check" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Comissões
-                                                </Button>
-                                            </RouterLink>
-                                        </MenuItem>
-                                        <MenuItem bg="#3D5A90">
                                             <RouterLink to="/lista-servico" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
                                                 <Button color="white" bg="#172237" _hover={{ bg: "#3D5A90" }} mb={0} py={6} w="full" justifyContent="space-between">
                                                     <i className="pi pi-list" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Serviços
-                                                </Button>
-                                            </RouterLink>
-                                        </MenuItem>
-                                    </MenuList>
-                                </Menu>
-
-                                <Menu>
-                                    <MenuButton color="white" boxSize="20" bg="#FF9D00" _hover={{ bg: "#FA7A32" }} mb={4} py={6} w="full" as={Button} rightIcon={<ChevronDownIcon />} justifyContent="space-between">
-                                        <i className="pi pi-plus-circle" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cadastrar
-                                    </MenuButton>
-                                    <MenuList bg="#3D5A90">
-                                        <MenuItem bg="#3D5A90">
-                                            <RouterLink to="/customizar-disponibilidade-calendario" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
-                                                <Button color="white" bg="#172237" _hover={{ bg: "#3D5A90" }} mb={0} py={8} w="full" justifyContent="space-between">
-                                                    <i className="pi pi-calendar-plus" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Customizar<br/>Disponibilidade
-                                                </Button>
-                                            </RouterLink>
-                                        </MenuItem>
-                                        <MenuItem bg="#3D5A90">
-                                            <RouterLink to="/programar-disponibilidade-calendario" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
-                                                <Button color="white" bg="#172237" _hover={{ bg: "#3D5A90" }} mb={0} py={8} w="full" justifyContent="space-between">
-                                                    <i className="pi pi-calendar-clock" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Programar<br/>Disponibilidade
                                                 </Button>
                                             </RouterLink>
                                         </MenuItem>
@@ -156,4 +120,4 @@ const MenuColaborador = () => {
     );
 };
 
-export default MenuColaborador;
+export default MenuCliente;

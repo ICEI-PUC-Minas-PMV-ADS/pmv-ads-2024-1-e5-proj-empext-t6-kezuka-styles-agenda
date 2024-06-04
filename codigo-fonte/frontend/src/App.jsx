@@ -1,26 +1,27 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
-
-import HomePage from './pages/HomePage';
 import PrivateRoute from './components/common/PrivateRoute';
-import DisponibilidadeCalendario from './pages/calendario/Disponibilidade';
-import GerarDisponibilidadeCalendario from './pages/calendario/GerarDisponibilidade';
-import FiltrarDisponibilidadeColaborador from './pages/colaborador/FiltrarDisponibilidade';
-import CadastroColaborador from './pages/colaborador/Cadastro';
-// import AtualizarColaborador from './pages/colaborador/Atualizar';
-import ListaColaboradores from './pages/colaborador/Lista';
-import CadastroServico from './pages/servico/Cadastro';
-import AtualizarServico from './pages/servico/Atualizar';
-import ListaServicos from './pages/servico/Lista';
-import CadastroComissoes from './pages/comissoes/Cadastro';
-import ListaComissoes from './pages/comissoes/Lista';
-// import AtualizarComissoes from './pages/comissoes/Atualizar';
-import CadastroCliente from './pages/cliente/Cadastro';
-import ListaCliente from './pages/cliente/Lista';
+import HomePage from './pages/HomePage';
+import CustomizarDisponibilidadeCalendario from './pages/CustomizarDisponibilidadeCalendario';
+import ProgramarDisponibilidadeCalendario from './pages/ProgramarDisponibilidadeCalendario';
+import FiltrarDisponibilidadeColaborador from './pages/FiltrarDisponibilidadeColaborador';
+import CadastroColaborador from './pages/CadastroColaborador';
+import AtualizarColaborador from './pages/AtualizarColaborador';
+import ListaColaboradores from './pages/ListaColaboradores';
+import CadastroServico from './pages/CadastroServico';
+import AtualizarServico from './pages/AtualizarServico';
+import ListaServicos from './pages/ListaServicos';
+import CadastroComissoes from './pages/CadastroComissoes';
+import ListaComissoes from './pages/ListaComissoes';
+import AtualizarComissoes from './pages/AtualizarComissoes';
+import CadastroCliente from './pages/CadastroCliente';
+import ListaCliente from './pages/ListaCliente';
 import ModalLogin from './components/layout/ModalLogin';
 import ProfilePage from './pages/ProfilePage';
 import Dashboard from './pages/Dashboard';
-import DashboardColaborador from './pages/colaborador/Dashboard';
+import DashboardColaborador from './pages/DashboardColaborador';
+import DashboardCliente from './pages/DashboardCliente';
+import CadastroAgendamento from './pages/CadastroAgendamento';
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/agendamento" element={
+            <PrivateRoute allowedTypes={['Cliente']}>
+              <CadastroAgendamento />
+            </PrivateRoute>} />
           <Route path="/dashboard" element={
             <PrivateRoute allowedTypes={['Gestor']}>
               <Dashboard />
@@ -36,16 +41,20 @@ function App() {
             <PrivateRoute allowedTypes={['Colaborador']}>
               <DashboardColaborador />
             </PrivateRoute>} />
-          <Route path="/disponibilidade-calendario" element={
+            <Route path="/dashboard-cliente" element={
+            <PrivateRoute allowedTypes={['Cliente']}>
+              <DashboardCliente />
+            </PrivateRoute>} />      
+          <Route path="/customizar-disponibilidade-calendario" element={
             <PrivateRoute allowedTypes={['Gestor', 'Colaborador']}>
-              <DisponibilidadeCalendario />
+              <CustomizarDisponibilidadeCalendario />
             </PrivateRoute>} />
-          <Route path="/gerar-disponibilidade-calendario" element={
+            <Route path="/programar-disponibilidade-calendario" element={
             <PrivateRoute allowedTypes={['Gestor', 'Colaborador']}>
-              <GerarDisponibilidadeCalendario />
+              <ProgramarDisponibilidadeCalendario />
             </PrivateRoute>} />
           <Route path="/disponibilidade-filtro-calendario" element={
-            <PrivateRoute allowedTypes={['Gestor', 'Colaborador']}>
+            <PrivateRoute allowedTypes={['Gestor', 'Colaborador', 'Cliente']}>
               <FiltrarDisponibilidadeColaborador />
             </PrivateRoute>} />
           <Route path="/cadastro-colaborador" element={
@@ -65,7 +74,7 @@ function App() {
               <CadastroServico />
             </PrivateRoute>} />
           <Route path="/lista-servico" element={
-            <PrivateRoute allowedTypes={['Gestor', 'Colaborador']}>
+            <PrivateRoute allowedTypes={['Gestor', 'Colaborador', 'Cliente']}>
               <ListaServicos />
             </PrivateRoute>} />
           <Route path="/atualizar-servico/:id" element={

@@ -49,7 +49,7 @@ const MenuGestor = () => {
                 <HStack spacing={4}>
                     <Avatar name={user?.nome || 'No Name'} src={user?.image || 'https://fallback-url.com/default-avatar.png'} mr={2} />
                     <VStack align="flex-start" spacing={0}>
-                        <Text fontSize="md" color="white" fontWeight="bold">{"Olá:"}&nbsp;&nbsp;{user?.nome || 'No Name'}</Text>
+                        <Text fontSize="md" color="white" fontWeight="bold">{"Olá,"}&nbsp;&nbsp;{user?.nome || 'No Name'}</Text>
                         <Text fontSize="sm" color="white">{user?.email || 'noemail@example.com'}</Text>
                     </VStack>
                 </HStack>
@@ -133,14 +133,14 @@ const MenuGestor = () => {
                                     </MenuButton>
                                     <MenuList bg="#3D5A90">
                                         <MenuItem bg="#3D5A90">
-                                            <RouterLink to="/disponibilidade-calendario" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
+                                            <RouterLink to="/customizar-disponibilidade-calendario" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
                                                 <Button color="white" bg="#172237" _hover={{ bg: "#3D5A90" }} mb={0} py={8} w="full" justifyContent="space-between">
                                                     <i className="pi pi-calendar-plus" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Customizar<br/>Disponibilidade
                                                 </Button>
                                             </RouterLink>
                                         </MenuItem>
                                         <MenuItem bg="#3D5A90">
-                                            <RouterLink to="/gerar-disponibilidade-calendario" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
+                                            <RouterLink to="/programar-disponibilidade-calendario" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
                                                 <Button color="white" bg="#172237" _hover={{ bg: "#3D5A90" }} mb={0} py={8} w="full" justifyContent="space-between">
                                                     <i className="pi pi-calendar-clock" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Programar<br/>Disponibilidade
                                                 </Button>

@@ -1,8 +1,7 @@
-# React + Vite
+# front-end in React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Agenda ONLINE | Kezuka Style's Professional's
 
-Currently, two official plugins are available:
+A Agenda online do cliente Kezuka Style's facilitará muito a vida dos clientes podendo eles agendarem ou cancelarem seus horários e também simplificará a organização da agenda dos colaboradores e uma gerenciamento de horário eficiente.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/f5125b23-fc90-41b6-8a69-10a92c2de598"></img>

@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import { Flex, Box, VStack, useToast } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-
-import CustomInput from '../../components/layout/CustomInput';
-import TitleSection from '../../components/layout/TitleSection';
-import ActionButtons from '../../components/layout/ActionButtons';
-import { registerService } from '../../services/serviceService';
-import { useAuth } from '../../contexts/AuthContext';
+import CustomInput from '../components/layout/CustomInput';
+import TitleSection from '../components/layout/TitleSection';
+import { registerService } from '../services/serviceService';
+import { useAuth } from '../contexts/AuthContext';
+import ActionButtons from '../components/layout/ActionButtons';
+import { useUserRedirect } from "../hooks/UseUserRedirect";
 
 const CadastroServico = () => {
     const { token } = useAuth();
     const toast = useToast();
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const { redirectToDashboard } = useUserRedirect();
+
     const [formData, setFormData] = useState({
         nome: '',
         valor: '',
@@ -27,7 +29,7 @@ const CadastroServico = () => {
     };
 
     const handleClose = () => {
-        navigate('/dashboard');
+        redirectToDashboard();
     };
 
     const handleSubmit = async (e) => {
@@ -108,12 +110,12 @@ const CadastroServico = () => {
 
     return (
         <Flex direction="column" minH="100vh" align="center" justify="center" bgGradient="linear(180deg, #455559, #182625)" w="100vw" m="0" p="0" overflowX="hidden">
-            <TitleSection title="Cadastro de Serviços" subtitle="Formulário de cadastro de serviços." />
+            <TitleSection title="Serviços" subtitle="Cadastro de Serviços" />
             <Box bg="#fff" p={5} shadow="md" borderWidth="1px" borderRadius="md" w={['100%', '100%', '50%']} maxWidth="960px" marginX="auto" marginTop="2rem" marginBottom="2rem" mt="1rem">
                 <form onSubmit={handleSubmit}>
                     <VStack spacing={4}>
-                        <CustomInput label="Nome" name="nome" placeholder="Digite o nome completo" value={formData.nome} onChange={handleChange} />
-                        <CustomInput label="Valor" name="valor" placeholder="Digite o valor do serviço" value={formData.valor} onChange={handleChange} />
+                        <CustomInput label="Nome" name="nome" placeholder="Descrição do Serviço" value={formData.nome} onChange={handleChange} />
+                        <CustomInput label="Valor" name="valor" placeholder="Valor do serviço" value={formData.valor} onChange={handleChange} />
                         <ActionButtons onBack={handleClose} onSave={handleSubmit} isSaveDisabled={null} />
                     </VStack>
                 </form>

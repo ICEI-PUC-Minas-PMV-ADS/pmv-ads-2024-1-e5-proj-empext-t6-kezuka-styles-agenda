@@ -1,7 +1,11 @@
-import { Table, Thead, Tbody, Tr, Th, Td, TableContainer, Button } from '@chakra-ui/react';
+import { Table, Thead, Tbody, Tr, Th, Td, TableContainer, IconButton } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
+import { DeleteIcon, RepeatIcon } from '@chakra-ui/icons';
+import { useUserRedirect } from '../../hooks/UseUserRedirect'
 
 const DataGridService = ({ data, onUpdate, onDelete }) => {
+    const { canEditOrDelete } = useUserRedirect();
+    const isEditable = canEditOrDelete();
 
     const formatCurrency = (value) => {
         return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -12,23 +16,48 @@ const DataGridService = ({ data, onUpdate, onDelete }) => {
             <Table size='md'>
                 <Thead>
                     <Tr>
-                        <Th>Nome</Th>
-                        <Th>Valor</Th>
-                        <Th>Atualizar</Th>
-                        <Th>Excluir</Th>
+                        <Th fontSize="14px" color="#3D5A73" fontWeight="bold" alignItems="left">
+                        <i className="pi pi-tag" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'green' }} />
+                        &nbsp;&nbsp;Descrição do Serviço</Th>
+                        <Th fontSize="14px" color="#3D5A73" fontWeight="bold" alignItems="left">
+                        <i className="pi pi-money-bill" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'green' }} />
+                        </Th>
+                        {isEditable && <Th>
+                            <i className="pi pi-file-edit" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'green' }} /></Th>}
+                        {isEditable && <Th>
+                            <i className="pi pi-trash" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'red' }} /></Th>}
                     </Tr>
                 </Thead>
                 <Tbody>
                     {data.map(item => (
                         <Tr key={item.servicoId}>
-                            <Td>{item.nome}</Td>
-                            <Td>{formatCurrency(parseFloat(item.valor))}</Td>
-                            <Td>
-                                <Button onClick={() => onUpdate(item)} colorScheme="blue">Atualizar</Button>
-                            </Td>
-                            <Td>
-                                <Button onClick={() => onDelete(item.servicoId)} colorScheme="red">Excluir</Button>
-                            </Td>
+                            <Td fontSize="18px" color="#3D5A73" fontWeight="bold" alignItems="center">
+                                <i className="pi pi-clipboard" style={{ fontSize: '25px', verticalAlign: 'middle', color: 'green' }} />
+                                &nbsp; &nbsp;&nbsp;{item.nome}</Td>
+                            <Td fontSize="18px" color="green" fontWeight="bold" alignItems="center">
+                                {formatCurrency(parseFloat(item.valor))}</Td>
+                            {isEditable && (
+                                <Td>
+                                    <IconButton
+                                        aria-label="Delete schedule"
+                                        icon={<RepeatIcon />}
+                                        size="sm"
+                                        colorScheme="blue"
+                                        onClick={() => onUpdate(item)}
+                                    />
+                                </Td>
+                            )}
+                            {isEditable && (
+                                <Td>
+                                    <IconButton
+                                        aria-label="Delete schedule"
+                                        icon={<DeleteIcon />}
+                                        size="sm"
+                                        colorScheme="red"
+                                        onClick={() => onDelete(item.comissaoId)}
+                                    />
+                                </Td>
+                            )}
                         </Tr>
                     ))}
                 </Tbody>

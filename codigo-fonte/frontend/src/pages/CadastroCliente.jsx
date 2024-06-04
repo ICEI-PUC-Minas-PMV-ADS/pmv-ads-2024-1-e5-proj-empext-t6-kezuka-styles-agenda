@@ -1,22 +1,19 @@
 import { useState } from 'react';
-import moment from 'moment-timezone';
-import { useNavigate } from 'react-router-dom';
 import { Flex, Box, VStack, useToast } from '@chakra-ui/react';
-
-import CustomInput from '../../components/layout/CustomInput';
-import TitleSection from '../../components/layout/TitleSection';
-import ActionButtons from '../../components/layout/ActionButtons';
-import { registerCollaborator } from '../../services/collaboratorService';
-import { useAuth } from '../../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import CustomInput from '../components/layout/CustomInput';
+import TitleSection from '../components/layout/TitleSection';
+import { registerClient } from '../services/clientService';
+import moment from 'moment-timezone';
+import ActionButtons from '../components/layout/ActionButtons';
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^\d{10,11}$/;
 const dateOfBirthRegex = /^(19[0-9]{2}|20[0-9]{2})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/;
+const nameRegex = /^[a-zA-Z\u00C0-\u017F´]+\s+[a-zA-Z\u00C0-\u017F´]{0,}$/;
+const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
 
-
-const CadastroColaborador = () => {
-
-    const { token } = useAuth();
+const CadastroCliente = () => {
     const toast = useToast();
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -29,7 +26,6 @@ const CadastroColaborador = () => {
         dataNascimento: '',
     });
 
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
@@ -39,7 +35,7 @@ const CadastroColaborador = () => {
     };
 
     const handleClose = () => {
-        navigate('/dashboard');
+        navigate('/');
     };
 
     const handleSubmit = async (e) => {
@@ -47,6 +43,62 @@ const CadastroColaborador = () => {
 
         if (isSubmitting) return;
         setIsSubmitting(true);
+
+        if (!nameRegex.test(formData.nome)) {
+            toast({
+                title: "Erro de validação",
+                description: "Por favor, insira um nome válido.",
+                status: "error",
+                duration: 1000,
+                isClosable: true,
+                onCloseComplete: () => {
+                    setIsSubmitting(false)
+                }
+            });
+            return;
+        }
+
+        if (!emailRegex.test(formData.email)) {
+            toast({
+                title: "Erro de validação",
+                description: "Por favor, insira um e-mail válido.",
+                status: "error",
+                duration: 2000,
+                isClosable: true,
+                onCloseComplete: () => {
+                    setIsSubmitting(false)
+                }
+            });
+            return;
+        }
+
+        if (!passwordRegex.test(formData.senha)) {
+            toast({
+                title: "Erro de validação",
+                description: "Por favor, insira uma senha válida. A senha deve ter pelo menos 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.",
+                status: "error",
+                duration: 2000,
+                isClosable: true,
+                onCloseComplete: () => {
+                    setIsSubmitting(false)
+                }
+            });
+            return;
+        }
+
+        if (!phoneRegex.test(formData.celular)) {
+            toast({
+                title: "Erro de validação",
+                description: "Por favor, insira um número de celular válido. (10 a 11 dígitos)",
+                status: "error",
+                duration: 2000,
+                isClosable: true,
+                onCloseComplete: () => {
+                    setIsSubmitting(false)
+                }
+            });
+            return;
+        }
 
         if (!dateOfBirthRegex.test(formData.dataNascimento)) {
             toast({
@@ -60,50 +112,23 @@ const CadastroColaborador = () => {
                 }
             });
             return;
-        } if (!emailRegex.test(formData.email)) {
-
-            toast({
-                title: "Erro de validação",
-                description: "Por favor, insira um e-mail válido.",
-                status: "error",
-                duration: 2000,
-                isClosable: true,
-                onCloseComplete: () => {
-                    setIsSubmitting(false)
-                }
-
-            });
-            return;
-
-        } if (!phoneRegex.test(formData.celular)) {
-            toast({
-                title: "Erro de validação",
-                description: "Por favor, insira um número de celular válido. (10 a 11 dígitos)",
-                status: "error",
-                duration: 2000,
-                isClosable: true,
-                onCloseComplete: () => {
-                    setIsSubmitting(false)
-                }
-            });
-            return;
         }
+
         try {
             const dataCadastro = moment().tz("America/Sao_Paulo").format();
-            const data = await registerCollaborator({ ...formData, dataCadastro }, token);
+            const data = await registerClient({ ...formData, dataCadastro });
             toast({
-                title: "Colaborador cadastrado",
-                description: `Os dados cadastrados com sucesso! ${data.nome || 'colaborador'}.`,
+                title: "Cliente cadastrado",
+                description: `Os dados foram cadastrados com sucesso! Bem-vindo(a), ${data.nome || 'cliente'}.`,
                 status: "success",
                 duration: 2500,
                 isClosable: true,
-                onCloseComplete: () => {
-                    navigate('/lista-colaborador')}
+                onCloseComplete: () => navigate('/login-modal')
             });
         } catch (error) {
             toast({
                 title: "Erro ao cadastrar",
-                description: error.message || "Não foi possível cadastrar o colaborador.",
+                description: error.message || "Não foi possível cadastrar o cliente.",
                 status: "error",
                 duration: 4000,
                 isClosable: true,
@@ -116,7 +141,7 @@ const CadastroColaborador = () => {
 
     return (
         <Flex direction="column" minH="100vh" align="center" justify="center" bgGradient="linear(180deg, #455559, #182625)" w="100vw" m="0" p="0" overflowX="hidden">
-            <TitleSection title="Cadastro de Colaboradores" subtitle="Formulário de cadastro de colaboradores." />
+            <TitleSection title="Cadastro de Clientes" subtitle="Olá amigo(a) cliente para obter um login de acesso, gentileza efetuar o cadastro." />
             <Box bg="#fff" p={5} shadow="md" borderWidth="1px" borderRadius="md" w={['100%', '100%', '50%']} maxWidth="960px" marginX="auto" marginTop="2rem" marginBottom="2rem" mt="1rem">
                 <form onSubmit={handleSubmit}>
                     <VStack spacing={4}>
@@ -133,4 +158,4 @@ const CadastroColaborador = () => {
     );
 };
 
-export default CadastroColaborador;
+export default CadastroCliente;

@@ -1,28 +1,31 @@
 import { useState, useEffect } from "react";
 import { Calendar } from 'primereact/calendar';
-import usePrimeReactLocale from '../../hooks/usePrimeReactLocale';
-import { Flex, Box, VStack, useToast, Select, Table, TableContainer, Thead, Tbody, Tr, Th, Td, IconButton, Icon, Button } from '@chakra-ui/react';
-import { TimeIcon, DeleteIcon, AddIcon } from '@chakra-ui/icons';
-import TitleSection from '../../components/layout/TitleSection';
-import { useNavigate } from 'react-router-dom';
-import { registerCalendar } from '../../services/serviceCalendar';
-import { useAuth } from '../../contexts/AuthContext';
-import { getCollaborators } from '../../services/collaboratorService';
-import ActionButtons from '../../components/layout/ActionButtons';
+import usePrimeReactLocale from '../hooks/usePrimeReactLocale';
+import { Flex, Box, VStack, useToast, Select, ChakraProvider, Icon, Button } from '@chakra-ui/react';
+import { AddIcon } from '@chakra-ui/icons';
+import DataGridCalendario from '../components/common/DataGridCalendario';
+import TitleSection from '../components/layout/TitleSection';
+import { registerCalendar } from '../services/calendarService';
+import { useAuth } from '../contexts/AuthContext';
+import { getCollaborators } from '../services/collaboratorService';
+import ActionButtons from '../components/layout/ActionButtons';
+import { useUserRedirect } from "../hooks/UseUserRedirect";
+import { ScrollTop } from 'primereact/scrolltop';
 
-const DisponibilidadeCalendario = () => {
+const CustomizarDisponibilidadeCalendario = () => {
     usePrimeReactLocale();
     const { token, user } = useAuth();
     const toast = useToast();
-    const navigate = useNavigate();
     const [collaborators, setCollaborators] = useState([]);
-    const [selectedDate, setSelectedDate] = useState(null);
+    const [selectedDate, setSelectedDate] = useState(new Date());
     const [selectedHour, setSelectedHour] = useState(null);
     const [selectedCollaboratorId, setSelectedCollaboratorId] = useState('');
     const [scheduleList, setScheduleList] = useState([]);
     const [isToastShowing, setIsToastShowing] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isAdding, setIsAdding] = useState(false);
+    const { redirectToDashboard } = useUserRedirect();
+    const [containerHeight] = useState('300px');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -57,10 +60,10 @@ const DisponibilidadeCalendario = () => {
             }
             return;
         }
-
+    
         const date = new Date(selectedDate);
         date.setHours(selectedHour.getHours(), selectedHour.getMinutes(), 0, 0);
-
+    
         if (scheduleList.some(item => new Date(item.dataHoraConfigurada).getTime() === date.getTime())) {
             toast({
                 title: "Erro de validação",
@@ -71,31 +74,33 @@ const DisponibilidadeCalendario = () => {
             });
             return;
         }
-
+    
         const offset = date.getTimezoneOffset() * 60000;
         const localISOTime = (new Date(date.getTime() - offset)).toISOString().slice(0, -1);
+        const calendarioId = Math.floor(Math.random() * 1000);
         const newSchedule = {
+            calendarioId: calendarioId,
             dataHoraConfigurada: localISOTime,
             gestorId: user.id,
             colaboradorId: selectedCollaboratorId
         };
-
+    
         setScheduleList((prev) => [...prev, newSchedule]);
         setSelectedHour(null);
-
+    
         setIsAdding(true);
         toast({
             title: "Horário Adicionado",
             description: "Um novo horário foi adicionado com sucesso à lista.",
-            status: "success",
+            status: "info",
             duration: 2000,
             isClosable: true,
             onCloseComplete: () => setIsAdding(false)
         });
     };
 
-    const handleRemoveSchedule = index => {
-        const newScheduleList = scheduleList.filter((_, i) => i !== index);
+    const handleRemoveSchedule = calendarioId => {
+        const newScheduleList = scheduleList.filter(item => item.calendarioId !== calendarioId);
         setScheduleList(newScheduleList);
     };
 
@@ -111,7 +116,7 @@ const DisponibilidadeCalendario = () => {
                 duration: 2500,
                 isClosable: true,
                 onCloseComplete: () => {
-                    navigate('/dashboard');
+                    redirectToDashboard();
                     setIsSubmitting(false);
                 }
             });
@@ -134,12 +139,12 @@ const DisponibilidadeCalendario = () => {
     };
 
     const handleClose = () => {
-        navigate('/dashboard');
+        redirectToDashboard();
     };
 
     return (
         <Flex direction="column" minH="100vh" align="center" justify="center" bgGradient="linear(180deg, #3D5A73, #182625)" w="100vw" m="0" p="0" overflowX="hidden">
-            <TitleSection title="Registro de Disponibilidade" subtitle="Formulário para registrar a disponibilidade do colaborador." />
+            <TitleSection title="Disponibilidade" subtitle="Customizar disponibilidade, hora em hora" />
             <Box bg="#fff" p={5} shadow="md" borderWidth="1px" borderRadius="md" w={['100%', '100%', '50%']} maxWidth="960px" marginX="auto" marginTop="2rem" marginBottom="2rem" mt="1rem">
                 <VStack spacing={4}>
                     <div className="card flex flex-wrap gap-3 p-fluid">
@@ -182,35 +187,12 @@ const DisponibilidadeCalendario = () => {
                             </Button>
                         </div>
                     </div>
-
-                    <TableContainer paddingY="7">
-                        <Table variant='simple'>
-                            <Thead>
-                                <Tr>
-                                    <Th fontSize="14px" color="#3D5A73" fontWeight="bold" alignItems="left">Data</Th>
-                                    <Th fontSize="14px" color="#3D5A73" fontWeight="bold" alignItems="left">Hora</Th>
-                                    <Th></Th>
-                                </Tr>
-                            </Thead>
-                            <Tbody>
-                                {scheduleList.map((item, index) => {
-                                    const date = new Date(item.dataHoraConfigurada);
-                                    return (
-                                        <Tr key={index}>
-                                            <Td fontSize="18px" color="#3D5A73" fontWeight="bold" alignItems="center">
-                                                <Icon as={TimeIcon} color="green" mr="4" boxSize="6" alignItems="center" />
-                                                {date.toLocaleDateString()}
-                                            </Td>
-                                            <Td fontSize="18px" color="#3D5A73" fontWeight="bold" alignItems="center">{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</Td>
-                                            <Td alignItems="center">
-                                                <IconButton size="sm" colorScheme="red" aria-label="Delete schedule" icon={<DeleteIcon />} onClick={() => handleRemoveSchedule(index)} />
-                                            </Td>
-                                        </Tr>
-                                    );
-                                })}
-                            </Tbody>
-                        </Table>
-                    </TableContainer>
+                     <ChakraProvider>
+                        <Box w={{ base: '100%', md: '70%' }} height={containerHeight} overflow="auto" position="relative">
+                            <DataGridCalendario data={scheduleList} onDelete={handleRemoveSchedule} />
+                            <ScrollTop target="parent" threshold={100} className="w-2rem h-2rem border-round bg-primary" icon="pi pi-arrow-up text-base" />
+                        </Box>
+                    </ChakraProvider>
                     <ActionButtons onBack={handleClose} onSave={handleSubmit} isSaveDisabled={scheduleList.length === 0 || isSubmitting} />
                 </VStack>
             </Box>
@@ -218,4 +200,4 @@ const DisponibilidadeCalendario = () => {
     );
 };
 
-export default DisponibilidadeCalendario;
+export default CustomizarDisponibilidadeCalendario;

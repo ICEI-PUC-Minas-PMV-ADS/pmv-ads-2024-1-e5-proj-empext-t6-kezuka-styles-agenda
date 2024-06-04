@@ -1,8 +1,13 @@
 import { Table, Thead, Tbody, Tr, Th, Td, TableContainer, IconButton } from '@chakra-ui/react';
 import { Icon, TimeIcon, DeleteIcon } from '@chakra-ui/icons';
 import PropTypes from 'prop-types';
+import { useUserRedirect } from '../../hooks/UseUserRedirect';
 
 const DataGridCalendario = ({ data, onDelete }) => {
+    const { canDelete } = useUserRedirect();
+    const isEditable = canDelete();
+
+
     const formatDate = (dateTimeStr) => {
         const date = new Date(dateTimeStr);
         return [
@@ -22,9 +27,14 @@ const DataGridCalendario = ({ data, onDelete }) => {
             <Table size='md'>
                 <Thead>
                     <Tr>
-                        <Th fontSize="14px" color="#3D5A73" fontWeight="bold" alignItems="left">Data</Th>
-                        <Th fontSize="14px" color="#3D5A73" fontWeight="bold" alignItems="left">Hora</Th>
-                        <Th></Th>
+                        <Th fontSize="14px" color="#3D5A73" fontWeight="bold" alignItems="left">
+                        <i className="pi pi-calendar-clock" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'green' }} />
+                            &nbsp;Data</Th>
+                        <Th fontSize="14px" color="#3D5A73" fontWeight="bold" alignItems="left">
+                        <i className="pi pi-clock" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'green' }} />
+                            &nbsp;Hora</Th>
+                        {isEditable && <Th>
+                            <i className="pi pi-trash" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'red' }} /></Th>}
                     </Tr>
                 </Thead>
                 <Tbody>
@@ -36,15 +46,17 @@ const DataGridCalendario = ({ data, onDelete }) => {
                             </Td>
                             <Td fontSize="18px" color="#3D5A73" fontWeight="bold" alignItems="center">
                                 {formatTime(item.dataHoraConfigurada)}</Td>
-                            <Td>
-                                <IconButton
-                                    aria-label="Delete schedule"
-                                    icon={<DeleteIcon />}
-                                    size="sm"
-                                    colorScheme="red"
-                                    onClick={() => onDelete(item.calendarioId)}
-                                />
-                            </Td>
+
+                            {isEditable && (
+                                <Td>
+                                    <IconButton
+                                        aria-label="Delete schedule"
+                                        icon={<DeleteIcon />}
+                                        size="sm"
+                                        colorScheme="red"
+                                        onClick={() => onDelete(item.calendarioId)}
+                                    />
+                                </Td>)}
                         </Tr>
                     ))}
                 </Tbody>

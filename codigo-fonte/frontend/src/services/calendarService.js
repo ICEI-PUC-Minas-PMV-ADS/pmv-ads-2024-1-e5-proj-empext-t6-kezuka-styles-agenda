@@ -24,6 +24,25 @@ export const registerCalendar = async (CalendarData, token) => {
 
 import moment from 'moment';
 
+export const getCalendarInDisponibility = async (colaboradorId, data, token) => {
+    try {
+        const config = {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        };
+
+        const formattedDate = moment(data, 'YYYY-DD-MM').format('YYYY-MM-DD');
+
+        const url = `/Calendario/Disponiveis/${colaboradorId}/${formattedDate}`;
+
+        const response = await calendarApi.get(url, config);
+        return response.data;
+    } catch (error) {
+        throw error.response ? error.response.data : new Error("An unexpected error occurred");
+    }
+};
+
 export const getCalendarForCollaborator = async (colaboradorId, data, token) => {
     try {
         const config = {
@@ -34,7 +53,7 @@ export const getCalendarForCollaborator = async (colaboradorId, data, token) => 
 
         const formattedDate = moment(data, 'YYYY-DD-MM').format('YYYY-MM-DD');
 
-        const url = `/Calendario/colaborador/${colaboradorId}/${formattedDate}`;
+        const url = `/Calendario/Colaborador/${colaboradorId}/${formattedDate}`;
 
         const response = await calendarApi.get(url, config);
         return response.data;

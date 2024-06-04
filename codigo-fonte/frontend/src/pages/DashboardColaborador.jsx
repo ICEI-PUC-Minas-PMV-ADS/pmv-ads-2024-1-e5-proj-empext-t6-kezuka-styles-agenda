@@ -1,6 +1,6 @@
 import { Box, Image, Center, Flex } from '@chakra-ui/react';
-import Header from '../../components/common/MenuColaborador';
-import Footer from '../../components/common/Footer';
+import Header from '../components/common/MenuColaborador';
+import Footer from '../components/common/Footer';
 
 const DashboardColaborador = () => {
   return (

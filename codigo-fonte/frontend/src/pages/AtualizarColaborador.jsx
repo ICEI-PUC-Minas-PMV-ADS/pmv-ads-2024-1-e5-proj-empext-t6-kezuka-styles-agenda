@@ -6,6 +6,7 @@ import TitleSection from '../components/layout/TitleSection';
 import { updateCollaborator } from '../services/collaboratorService';
 import { useAuth } from '../contexts/AuthContext';
 import ActionButtons from '../components/layout/ActionButtons'; 
+import { useUserRedirect } from "../hooks/UseUserRedirect";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^\d{10,11}$/;
@@ -19,6 +20,7 @@ const AtualizarColaborador = () => {
     const navigate = useNavigate();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const collaborator = location.state.collaborator;
+    const { redirectToDashboard } = useUserRedirect();
 
     const [formData, setFormData] = useState({
         nome: '',
@@ -51,7 +53,7 @@ const AtualizarColaborador = () => {
     };
 
     const handleClose = () => {
-        navigate('/dashboard');
+        redirectToDashboard();
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -135,7 +137,7 @@ const AtualizarColaborador = () => {
 
     return (
         <Flex direction="column" minH="100vh" align="center" justify="center" bgGradient="linear(180deg, #455559, #182625)" w="100vw" m="0" p="0" overflowX="hidden">
-            <TitleSection title="Atualizar dados do Colaborador" subtitle="Formulário de atualização de colaboradores." />
+            <TitleSection title="Colaborador" subtitle="Atualização do colaborador" />
             <Box bg="#fff" p={5} shadow="md" borderWidth="1px" borderRadius="md" w={['100%', '100%', '50%']} maxWidth="960px" marginX="auto" marginTop="2rem" marginBottom="2rem" mt="1rem">
                 <form onSubmit={handleSubmit}>
                     <VStack spacing={4}>
