@@ -1,6 +1,7 @@
 import { Box, Image, Center, Flex } from '@chakra-ui/react';
 import { Header } from '../components/common/Header';
 import Footer from '../components/common/Footer';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
@@ -15,19 +16,21 @@ const Dashboard = () => {
           m="0"
         />
         <Center my={4}>
-          <Box
-            as='button'
-            p={5}
-            color='white'
-            fontWeight='bold'
-            borderRadius='md'
-            bgGradient='linear(to-l, #C02428, #C02428)'
-            _hover={{
-              bg: "#244196",
-            }}
-          >
-            AGENDAR
-          </Box>
+          <Link to="/agendamento">
+            <Box
+              as='button'
+              p={5}
+              color='white'
+              fontWeight='bold'
+              borderRadius='md'
+              bg='#C02428'
+              _hover={{
+                bg: "#244196",
+              }}
+            >
+              Agendar
+            </Box>
+          </Link>
         </Center>
       </Box>
       <Footer />

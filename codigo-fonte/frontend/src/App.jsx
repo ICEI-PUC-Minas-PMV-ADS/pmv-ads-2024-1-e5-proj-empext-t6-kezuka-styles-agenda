@@ -17,7 +17,7 @@ import AtualizarComissoes from './pages/AtualizarComissoes';
 import CadastroCliente from './pages/CadastroCliente';
 import ListaCliente from './pages/ListaCliente';
 import ModalLogin from './components/layout/ModalLogin';
-import ProfilePage from './pages/ProfilePage';
+import NotFound from './pages/NotFound';
 import Dashboard from './pages/Dashboard';
 import DashboardColaborador from './pages/DashboardColaborador';
 import DashboardCliente from './pages/DashboardCliente';
@@ -99,7 +99,7 @@ function App() {
             </PrivateRoute>} />
           <Route path="/cadastro-cliente" element={<CadastroCliente />} />
           <Route path="/login-modal" element={<ModalLogin />} />
-          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </AuthProvider>
