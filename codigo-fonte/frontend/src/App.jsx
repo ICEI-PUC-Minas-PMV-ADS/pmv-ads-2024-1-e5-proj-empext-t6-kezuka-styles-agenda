@@ -41,15 +41,15 @@ function App() {
             <PrivateRoute allowedTypes={['Colaborador']}>
               <DashboardColaborador />
             </PrivateRoute>} />
-            <Route path="/dashboard-cliente" element={
+          <Route path="/dashboard-cliente" element={
             <PrivateRoute allowedTypes={['Cliente']}>
               <DashboardCliente />
-            </PrivateRoute>} />      
+            </PrivateRoute>} />
           <Route path="/customizar-disponibilidade-calendario" element={
             <PrivateRoute allowedTypes={['Gestor', 'Colaborador']}>
               <CustomizarDisponibilidadeCalendario />
             </PrivateRoute>} />
-            <Route path="/programar-disponibilidade-calendario" element={
+          <Route path="/programar-disponibilidade-calendario" element={
             <PrivateRoute allowedTypes={['Gestor', 'Colaborador']}>
               <ProgramarDisponibilidadeCalendario />
             </PrivateRoute>} />

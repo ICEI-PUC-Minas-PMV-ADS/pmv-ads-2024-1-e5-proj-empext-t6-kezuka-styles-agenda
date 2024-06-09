@@ -1,5 +1,5 @@
 import { Box, Image, Center, Flex } from '@chakra-ui/react';
-import Header from '../components/common/MenuGestor';
+import { Header } from '../components/common/Header';
 import Footer from '../components/common/Footer';
 
 const Dashboard = () => {
