@@ -144,3 +144,4 @@ Critério de Êxito | Porcentagem adicionadas a um colaborador.
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/046c809f-4567-4b43-8b55-87fb5d763820"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/a820a420-9a77-40be-86da-3967a1f62ecb"></img>
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/3403f87f-ae96-459a-a378-f6776fd691f2"></img>
