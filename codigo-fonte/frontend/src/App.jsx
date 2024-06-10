@@ -17,11 +17,13 @@ import AtualizarComissoes from './pages/AtualizarComissoes';
 import CadastroCliente from './pages/CadastroCliente';
 import ListaCliente from './pages/ListaCliente';
 import ModalLogin from './components/layout/ModalLogin';
-import NotFound from './pages/NotFound';
+import ProfilePage from './pages/ProfilePage';
 import Dashboard from './pages/Dashboard';
 import DashboardColaborador from './pages/DashboardColaborador';
 import DashboardCliente from './pages/DashboardCliente';
 import CadastroAgendamento from './pages/CadastroAgendamento';
+import ListaAgendamentos from './pages/ListaAgendamentos';
+import ListaAgendamentosColaborador from './pages/ListaAgendamentosColaborador';
 
 function App() {
   return (
@@ -33,6 +35,14 @@ function App() {
             <PrivateRoute allowedTypes={['Cliente']}>
               <CadastroAgendamento />
             </PrivateRoute>} />
+          <Route path="/lista-agendamento" element={
+            <PrivateRoute allowedTypes={['Cliente']}>
+              <ListaAgendamentos />
+            </PrivateRoute>} />
+          <Route path="/lista-agendamento-colaborador" element={
+            <PrivateRoute allowedTypes={['Colaborador']}>
+              <ListaAgendamentosColaborador />
+            </PrivateRoute>} />    
           <Route path="/dashboard" element={
             <PrivateRoute allowedTypes={['Gestor']}>
               <Dashboard />
@@ -41,15 +51,15 @@ function App() {
             <PrivateRoute allowedTypes={['Colaborador']}>
               <DashboardColaborador />
             </PrivateRoute>} />
-          <Route path="/dashboard-cliente" element={
+            <Route path="/dashboard-cliente" element={
             <PrivateRoute allowedTypes={['Cliente']}>
               <DashboardCliente />
-            </PrivateRoute>} />
+            </PrivateRoute>} />      
           <Route path="/customizar-disponibilidade-calendario" element={
             <PrivateRoute allowedTypes={['Gestor', 'Colaborador']}>
               <CustomizarDisponibilidadeCalendario />
             </PrivateRoute>} />
-          <Route path="/programar-disponibilidade-calendario" element={
+            <Route path="/programar-disponibilidade-calendario" element={
             <PrivateRoute allowedTypes={['Gestor', 'Colaborador']}>
               <ProgramarDisponibilidadeCalendario />
             </PrivateRoute>} />
@@ -99,7 +109,7 @@ function App() {
             </PrivateRoute>} />
           <Route path="/cadastro-cliente" element={<CadastroCliente />} />
           <Route path="/login-modal" element={<ModalLogin />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </Router>
     </AuthProvider>

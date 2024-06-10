@@ -38,7 +38,7 @@ const ListaServicos = () => {
           isClosable: true,
         });
       });
-  }, [0]);
+  }, [token, toast]);
 
   const handleDelete = async (id) => {
     try {

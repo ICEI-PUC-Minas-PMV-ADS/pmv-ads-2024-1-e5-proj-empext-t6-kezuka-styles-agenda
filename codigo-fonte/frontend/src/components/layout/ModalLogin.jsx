@@ -29,7 +29,7 @@ function ModalLogin() {
     const navigate = useNavigate();
     const location = useLocation();
     const toast = useToast();
-    const [email, setEmail] = useState('gabrielnakata@gmail.com');
+    const [email, setEmail] = useState('lucasbarber@gmail.com');
     const [password, setPassword] = useState('acesso');
     const [isLoading, setIsLoading] = useState(false);
 
@@ -59,10 +59,10 @@ function ModalLogin() {
                     navigate('/dashboard');
                     break;
                 case 'Colaborador':
-                    navigate('/dashboard-colaborador');
+                    navigate('/lista-agendamento-colaborador');
                     break;
                 case 'Cliente':
-                    navigate('/dashboard-cliente');
+                    navigate('/lista-agendamento');
                     break;
                 default:
                     navigate('/');

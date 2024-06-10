@@ -22,6 +22,22 @@ export const registerService = async (serviceData, token) => {
     }
 };
 
+export const getServicesFromAgendamentoClient = async (token, agendamentoId, clienteId) => {
+    try {
+        const config = {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        };
+
+        const response = await serviceApi.get(`/Servicos/Agendamento/${agendamentoId}/${clienteId}`, config);
+        return response.data;
+    } catch (error) {
+        throw error.response ? error.response.data : new Error("An unexpected error occurred");
+    }
+};
+
+
 export const getServices = async (token) => {
     try {
         const config = {

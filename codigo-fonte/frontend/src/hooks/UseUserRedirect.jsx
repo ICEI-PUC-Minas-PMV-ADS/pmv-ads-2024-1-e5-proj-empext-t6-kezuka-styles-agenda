@@ -8,13 +8,13 @@ export function useUserRedirect() {
     function redirectToDashboard() {
         switch (user.tipoUsuario) {
             case 'Gestor':
-                navigate('/dashboard');
+                navigate('/lista-agendamento-colaborador');
                 break;
             case 'Colaborador':
-                navigate('/dashboard-colaborador');
+                navigate('/lista-agendamento-colaborador');
                 break;
             case 'Cliente':
-                navigate('/dashboard-cliente');
+                navigate('/lista-agendamento');
                 break;
             default:
                 navigate('/');

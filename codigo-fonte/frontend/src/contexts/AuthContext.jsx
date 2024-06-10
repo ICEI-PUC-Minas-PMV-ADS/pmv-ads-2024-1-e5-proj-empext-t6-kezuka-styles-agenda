@@ -1,28 +1,18 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
 const AuthContext = createContext();
 
-export const useAuth = () => useContext(AuthContext);
+export function useAuth() {
+    return useContext(AuthContext);
+}
 
 export const AuthProvider = ({ children }) => {
     const [authState, setAuthState] = useState({
         user: null,
         token: null,
-        tipoUsuario: null
+        tipoUsuario: null 
     });
-
-    useEffect(() => {
-        const token = localStorage.getItem('userToken');
-        const userData = localStorage.getItem('userData');
-        if (token && userData) {
-            setAuthState({
-                user: JSON.parse(userData),
-                token,
-                tipoUsuario: JSON.parse(userData).tipoUsuario
-            });
-        }
-    }, []);
 
     const login = (userData, authToken) => {
         setAuthState({

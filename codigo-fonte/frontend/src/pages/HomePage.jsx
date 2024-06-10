@@ -1,9 +1,16 @@
-import { Link } from 'react-router-dom';
 import { Box, Image, Center, Flex } from '@chakra-ui/react';
-import { Header } from '../components/common/Header';
+import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate('/login-modal');
+  };
+
+
   return (
     <Flex direction="column" minH="100vh" bg="#fff" w="100vw" m="0" p="0" overflowX="hidden">
       <Header />
@@ -16,21 +23,20 @@ const HomePage = () => {
           m="0"
         />
         <Center my={4}>
-          <Link to="/agendamento">
-            <Box
-              as='button'
-              p={5}
-              color='white'
-              fontWeight='bold'
-              borderRadius='md'
-              bg='#C02428'
-              _hover={{
-                bg: "#244196",
-              }}
-            >
-              Agendar
-            </Box>
-          </Link>
+          <Box
+            as='button'
+            p={5}
+            color='white'
+            fontWeight='bold'
+            borderRadius='md'
+            onClick={handleNavigate}
+            bgGradient='linear(to-l, #C02428, #C02428)'
+            _hover={{
+              bg: "#244196",
+            }}
+          >
+            AGENDAR
+          </Box>
         </Center>
       </Box>
       <Footer />
