@@ -24,7 +24,8 @@ A ilustração de como as tecnologias estão relacionadas e como uma interação
 
 ## Project Model Canvas
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/104144665/b99ea6e6-e642-44a4-a994-5b8911c50ffd)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/104144665/5b6f2fdf-9a5d-41cc-ab0a-66d90ffbfa58)
+
 
 # Personas
 
