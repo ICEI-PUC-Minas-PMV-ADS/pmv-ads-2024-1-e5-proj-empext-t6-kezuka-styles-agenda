@@ -166,7 +166,8 @@ O diagrama de casos de uso é o próximo passo após a elicitação de requisito
 
 ## Modelo ER (Projeto Conceitual)
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/104144665/47f19a6c-2a39-44d4-9b77-230698bcf626)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/104144665/0b8c02b0-fc11-463d-b3bd-85a99cb58d16)
+
 
 
 ## Projeto da Base de Dados
