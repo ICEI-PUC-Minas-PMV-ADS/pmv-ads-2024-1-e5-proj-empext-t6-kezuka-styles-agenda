@@ -1,0 +1,26 @@
+message: Please cite this software using these metadata.
+title: Kezuka Styles Agenda
+authors:
+  - family-names: Stiebler Carneiro da Silva
+    given-names: Aaron
+  - family-names: Emanoel Coelho de Paula
+    given-names: Arthur
+  - family-names: Alves de Lima Sales
+    given-names: Ayrles
+  - family-names: Nakhata Lopes Rua Nhimi
+    given-names: Gabriel
+  - family-names: Henrique de Oliveira Camargo
+    given-names: Khaio
+  - family-names: Grimaldi Santa Anna
+    given-names: Jéssica
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Christina de Paiva Carvalho
+    given-names: Joyce
+keywords:
+  - Agenda
+  - Barbearia
+  - Serviços
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda
+version: 1.0.0
+date-released: 2024-23-06
