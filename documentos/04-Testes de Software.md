@@ -113,9 +113,13 @@ Critério de Êxito | Login de colaborador realizado com sucesso
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/6c1a3cf8-ec14-4f98-8eac-3e3231aa7ced"></img>
 
-# Filtrar de disponibilidade por colaborador acesso Gestor
+# Filtrar disponibilidade por colaborador acesso Gestor e Cliente
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/4349f2eb-c9e0-4b8c-b69c-b554f2e7c66e"></img>
+
+# Filtrar disponibilidade acesso Colaborador
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/1a39a591-38cc-45ab-8528-5205449d4f03"></src>
 
 # **Caso de teste**  **CT-01-Cadastro de Colaborador pelo Gestor**
 Requisito Associado **RF-006 - Permitir que o gestor cadastre colaboradores**
