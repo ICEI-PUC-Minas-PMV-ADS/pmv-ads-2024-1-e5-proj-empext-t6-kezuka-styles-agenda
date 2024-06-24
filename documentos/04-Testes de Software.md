@@ -113,9 +113,13 @@ Critério de Êxito | Login de colaborador realizado com sucesso
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/6c1a3cf8-ec14-4f98-8eac-3e3231aa7ced"></img>
 
-# Filtrar disponibilidade por colaborador acesso Gestor e Cliente
+# Filtrar disponibilidade por colaborador acesso Gestor
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/4349f2eb-c9e0-4b8c-b69c-b554f2e7c66e"></img>
+
+# Filtrar disponibilidade por colaborador acesso Cliente
+
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/a44972f6-8523-40a6-81a3-90db1597a1f3"></img>
 
 # Filtrar disponibilidade acesso Colaborador
 
