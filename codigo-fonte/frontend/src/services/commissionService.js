@@ -22,7 +22,7 @@ export const registerCommission = async (commissionData, token) => {
     }
 };
 
-export const getCommission = async (token) => {
+export const getCommission = async (email, token) => {
     try {
         const config = {
             headers: {
@@ -30,7 +30,7 @@ export const getCommission = async (token) => {
             }
         };
 
-        const response = await serviceApi.get('/Comissoes', config);
+        const response = await serviceApi.get(`/Comissoes/GetComissoesPorTipoUsuario/${email}`, config);
         return response.data;
     } catch (error) {
         throw error.response ? error.response.data : new Error("An unexpected error occurred");

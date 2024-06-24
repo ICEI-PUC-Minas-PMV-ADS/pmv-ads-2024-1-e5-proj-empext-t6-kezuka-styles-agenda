@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { ChakraProvider, Flex, Box, useToast, VStack } from '@chakra-ui/react';
 import { ScrollTop } from 'primereact/scrolltop';
 import DataGridScheduling from '../components/common/DataGridScheduling';
-import TitleSection from '../components/layout/TitleSection';
+import TitleSection from '../components/common/TitleSection';
 import { getSchedulingForClient } from '../services/schedulingService';
 import { useAuth } from '../contexts/AuthContext';
-import AgendamentoModal from '../components/layout/AgendamentoModal';
+import AgendamentoModal from '../components/common/AgendamentoModal';
 import MenuCliente from '../components/common/MenuCliente';
 import Footer from '../components/common/Footer';
 

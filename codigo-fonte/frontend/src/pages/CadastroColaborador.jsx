@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Flex, Box, VStack, useToast } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import CustomInput from '../components/layout/CustomInput';
-import TitleSection from '../components/layout/TitleSection';
+import CustomInput from '../components/common/CustomInput';
+import TitleSection from '../components/common/TitleSection';
 import { registerCollaborator } from '../services/collaboratorService';
 import moment from 'moment-timezone';
 import { useAuth } from '../contexts/AuthContext';
-import ActionButtons from '../components/layout/ActionButtons'; 
+import ActionButtons from '../components/common/ActionButtons'; 
 import { useUserRedirect } from "../hooks/UseUserRedirect";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -52,8 +52,8 @@ const CadastroColaborador = () => {
             toast({
                 title: "Erro de validação",
                 description: "Por favor, insira um nome válido.",
-                status: "error",
-                duration: 1000,
+                status: "info",
+                duration: 2000,
                 isClosable: true,
                 onCloseComplete: () => {
                     setIsSubmitting(false)
@@ -66,7 +66,7 @@ const CadastroColaborador = () => {
             toast({
                 title: "Erro de validação",
                 description: "Por favor, insira um e-mail válido.",
-                status: "error",
+                status: "info",
                 duration: 2000,
                 isClosable: true,
                 onCloseComplete: () => {
@@ -79,8 +79,8 @@ const CadastroColaborador = () => {
         if (!passwordRegex.test(formData.senha)) {
             toast({
                 title: "Erro de validação",
-                description: "A senha deve conter no mínimo 8 caracteres, com pelo menos uma letra e um número.",
-                status: "error",
+                description: "A senha deve conter no mínimo 8 caracteres, com pelo menos uma letra e um númeroPor favor, insira uma senha válida. A senha deve ter pelo menos 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial..",
+                status: "info",
                 duration: 2000,
                 isClosable: true,
                 onCloseComplete: () => {
@@ -94,7 +94,7 @@ const CadastroColaborador = () => {
             toast({
                 title: "Erro de validação",
                 description: "Por favor, insira um número de celular válido. (10 a 11 dígitos)",
-                status: "error",
+                status: "info",
                 duration: 2000,
                 isClosable: true,
                 onCloseComplete: () => {
@@ -108,8 +108,8 @@ const CadastroColaborador = () => {
             toast({
                 title: "Erro de validação",
                 description: "Por favor, insira uma data de nascimento válida.",
-                status: "error",
-                duration: 1000,
+                status: "info",
+                duration: 2000,
                 isClosable: true,
                 onCloseComplete: () => {
                     setIsSubmitting(false)

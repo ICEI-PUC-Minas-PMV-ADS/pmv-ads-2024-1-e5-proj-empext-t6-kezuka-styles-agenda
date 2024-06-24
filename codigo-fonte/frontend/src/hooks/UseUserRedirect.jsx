@@ -8,7 +8,7 @@ export function useUserRedirect() {
     function redirectToDashboard() {
         switch (user.tipoUsuario) {
             case 'Gestor':
-                navigate('/lista-agendamento-colaborador');
+                navigate('/lista-agendamento-gestor');
                 break;
             case 'Colaborador':
                 navigate('/lista-agendamento-colaborador');

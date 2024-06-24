@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Flex, Box, VStack, useToast, Select } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import CustomInput from '../components/layout/CustomInput';
-import TitleSection from '../components/layout/TitleSection';
+import CustomInput from '../components/common/CustomInput';
+import TitleSection from '../components/common/TitleSection';
 import { registerCommission } from '../services/commissionService';
 import { getCollaborators } from '../services/collaboratorService';
 import { getServices } from '../services/serviceService';
 import { useAuth } from '../contexts/AuthContext';
-import ActionButtons from '../components/layout/ActionButtons';
+import ActionButtons from '../components/common/ActionButtons';
 import { useUserRedirect } from "../hooks/UseUserRedirect";
 
 const CadastroComissoes = () => {

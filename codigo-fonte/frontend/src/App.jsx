@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import CustomizarDisponibilidadeCalendario from './pages/CustomizarDisponibilidadeCalendario';
 import ProgramarDisponibilidadeCalendario from './pages/ProgramarDisponibilidadeCalendario';
 import FiltrarDisponibilidadeColaborador from './pages/FiltrarDisponibilidadeColaborador';
+import FiltrarDisponibilidade from './pages/FiltrarDisponibilidade';
 import CadastroColaborador from './pages/CadastroColaborador';
 import AtualizarColaborador from './pages/AtualizarColaborador';
 import ListaColaboradores from './pages/ListaColaboradores';
@@ -16,7 +17,7 @@ import ListaComissoes from './pages/ListaComissoes';
 import AtualizarComissoes from './pages/AtualizarComissoes';
 import CadastroCliente from './pages/CadastroCliente';
 import ListaCliente from './pages/ListaCliente';
-import ModalLogin from './components/layout/ModalLogin';
+import ModalLogin from './components/common/ModalLogin';
 import ProfilePage from './pages/ProfilePage';
 import Dashboard from './pages/Dashboard';
 import DashboardColaborador from './pages/DashboardColaborador';
@@ -24,11 +25,14 @@ import DashboardCliente from './pages/DashboardCliente';
 import CadastroAgendamento from './pages/CadastroAgendamento';
 import ListaAgendamentos from './pages/ListaAgendamentos';
 import ListaAgendamentosColaborador from './pages/ListaAgendamentosColaborador';
+import ListaAgendamentosGestor from './pages/ListaAgendamentosGestor';
+import EsqueciMinhaSenha from './pages/EsqueciMinhaSenha';
 
 function App() {
+
   return (
     <AuthProvider>
-      <Router>
+      <Router basename={import.meta.env.VITE_BASE_URL}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/agendamento" element={
@@ -42,7 +46,11 @@ function App() {
           <Route path="/lista-agendamento-colaborador" element={
             <PrivateRoute allowedTypes={['Colaborador']}>
               <ListaAgendamentosColaborador />
-            </PrivateRoute>} />    
+            </PrivateRoute>} />
+          <Route path="/lista-agendamento-gestor" element={
+            <PrivateRoute allowedTypes={['Gestor']}>
+              <ListaAgendamentosGestor />
+            </PrivateRoute>} />         
           <Route path="/dashboard" element={
             <PrivateRoute allowedTypes={['Gestor']}>
               <Dashboard />
@@ -51,7 +59,7 @@ function App() {
             <PrivateRoute allowedTypes={['Colaborador']}>
               <DashboardColaborador />
             </PrivateRoute>} />
-            <Route path="/dashboard-cliente" element={
+          <Route path="/dashboard-cliente" element={
             <PrivateRoute allowedTypes={['Cliente']}>
               <DashboardCliente />
             </PrivateRoute>} />      
@@ -59,13 +67,17 @@ function App() {
             <PrivateRoute allowedTypes={['Gestor', 'Colaborador']}>
               <CustomizarDisponibilidadeCalendario />
             </PrivateRoute>} />
-            <Route path="/programar-disponibilidade-calendario" element={
+          <Route path="/programar-disponibilidade-calendario" element={
             <PrivateRoute allowedTypes={['Gestor', 'Colaborador']}>
               <ProgramarDisponibilidadeCalendario />
             </PrivateRoute>} />
           <Route path="/disponibilidade-filtro-calendario" element={
-            <PrivateRoute allowedTypes={['Gestor', 'Colaborador', 'Cliente']}>
+            <PrivateRoute allowedTypes={['Gestor', 'Cliente']}>
               <FiltrarDisponibilidadeColaborador />
+            </PrivateRoute>} />
+          <Route path="/disponibilidade-filtro-calendario-colaborador" element={
+            <PrivateRoute allowedTypes={['Colaborador']}>
+              <FiltrarDisponibilidade />
             </PrivateRoute>} />
           <Route path="/cadastro-colaborador" element={
             <PrivateRoute allowedTypes={['Gestor']}>
@@ -108,6 +120,7 @@ function App() {
               <ListaCliente />
             </PrivateRoute>} />
           <Route path="/cadastro-cliente" element={<CadastroCliente />} />
+          <Route path="/esqueci-minha-senha" element={<EsqueciMinhaSenha/>} />
           <Route path="/login-modal" element={<ModalLogin />} />
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { VStack, ChakraProvider, Flex, Box, useToast } from '@chakra-ui/react';
 import DataGridClient from '../components/common/DataGridClient';
-import TitleSection from '../components/layout/TitleSection';
+import TitleSection from '../components/common/TitleSection';
 import { getClient } from '../services/clientService';
 import { useAuth } from '../contexts/AuthContext';
 import { useUserRedirect } from "../hooks/UseUserRedirect";
 import { ScrollTop } from 'primereact/scrolltop';
-import ActionButtons from '../components/layout/ActionButtons';
+import ActionButtons from '../components/common/ActionButtons';
 
 const ListaCliente = () => {
   const { token } = useAuth();

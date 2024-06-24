@@ -16,12 +16,13 @@ import {
     HStack,
     Link,
     Text,
-    useToast
+    useToast,
 } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { loginUser } from '../../services/loginService';
 import { useAuth } from '../../contexts/AuthContext';
+import logo from '../../assets/logo-kezuka.svg';
 
 function ModalLogin() {
     const { login } = useAuth();
@@ -29,8 +30,8 @@ function ModalLogin() {
     const navigate = useNavigate();
     const location = useLocation();
     const toast = useToast();
-    const [email, setEmail] = useState('lucasbarber@gmail.com');
-    const [password, setPassword] = useState('acesso');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
@@ -56,7 +57,7 @@ function ModalLogin() {
 
             switch (data.tipoUsuario) {
                 case 'Gestor':
-                    navigate('/dashboard');
+                    navigate('/lista-agendamento-gestor');
                     break;
                 case 'Colaborador':
                     navigate('/lista-agendamento-colaborador');
@@ -72,7 +73,7 @@ function ModalLogin() {
             toast({
                 title: "Ops, o login falhou...",
                 description: error.response?.data?.message || "Verifique o login e senha, os dados podem estar errados...",
-                status: "error",
+                status: "info",
                 duration: 3000,
                 isClosable: true
             });
@@ -101,7 +102,7 @@ function ModalLogin() {
                     <ModalBody>
                         <Stack align="center" paddingTop={10}>
                             <Image
-                                src="../src/assets/logo-kezuka.svg"
+                                src={logo} 
                                 boxSize="180px"
                                 alt="Logo AgendaOn Kezuka Style's"
                             />
@@ -113,9 +114,17 @@ function ModalLogin() {
                             <FormControl isRequired>
                                 <FormLabel>Senha</FormLabel>
                                 <Input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Insira sua senha" />
-                                <Text mt={2} textAlign="center" fontSize="sm">
-                                    <Link color="black" onClick={() => navigate('/forgot-password')}>Esqueci minha senha</Link>
-                                </Text>
+                                <HStack justifyContent="center">
+                                    <Text mt={2} textAlign="center" fontSize="sm">
+                                        <Link color="black" onClick={() => navigate('/esqueci-minha-senha')}>Esqueci minha senha</Link>
+                                    </Text>
+                                    <Text mt={2} textAlign="center" fontSize="sm">
+                                        |
+                                    </Text>
+                                    <Text mt={2} textAlign="center" fontSize="sm">
+                                        <Link color="black" onClick={() => navigate('/cadastro-cliente')}>Não possuo cadastro</Link>
+                                    </Text>
+                                </HStack>
                             </FormControl>
                         </Stack>
                     </ModalBody>

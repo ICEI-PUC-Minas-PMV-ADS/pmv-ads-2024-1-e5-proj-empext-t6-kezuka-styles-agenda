@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Flex, Box, VStack, useToast } from '@chakra-ui/react';
-import CustomInput from '../components/layout/CustomInput';
-import TitleSection from '../components/layout/TitleSection';
+import CustomInput from '../components/common/CustomInput';
+import TitleSection from '../components/common/TitleSection';
 import { updateCollaborator } from '../services/collaboratorService';
 import { useAuth } from '../contexts/AuthContext';
-import ActionButtons from '../components/layout/ActionButtons'; 
+import ActionButtons from '../components/common/ActionButtons'; 
 import { useUserRedirect } from "../hooks/UseUserRedirect";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

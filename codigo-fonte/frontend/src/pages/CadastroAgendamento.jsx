@@ -3,14 +3,14 @@ import { Calendar } from 'primereact/calendar';
 import { ScrollTop } from 'primereact/scrolltop';
 import usePrimeReactLocale from '../hooks/usePrimeReactLocale';
 import { ChakraProvider, Flex, Box, VStack, useToast, Select, Switch, Text, HStack, Input } from '@chakra-ui/react';
-import TitleSection from '../components/layout/TitleSection';
+import TitleSection from '../components/common/TitleSection';
 import DataGridHour from '../components/common/DataGridHour';
 import DataGridHourService from '../components/common/DataGridHourService';
 import { getCollaborators } from '../services/collaboratorService';
 import { getServices } from '../services/serviceService';
 import { registerScheduling } from '../services/schedulingService';
 import { getCalendarInDisponibility } from '../services/calendarService';
-import ActionButtons from '../components/layout/ActionButtons';
+import ActionButtons from '../components/common/ActionButtons';
 import { useUserRedirect } from '../hooks/UseUserRedirect';
 import { useAuth } from '../contexts/AuthContext';
 

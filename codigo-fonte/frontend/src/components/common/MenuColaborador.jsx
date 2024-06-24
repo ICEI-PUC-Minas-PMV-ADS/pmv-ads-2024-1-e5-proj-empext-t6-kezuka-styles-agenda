@@ -78,12 +78,12 @@ const MenuColaborador = () => {
                             </Badge>
 
                             <Flex direction="column" mt="50px" align="center" w="100%">
-
+{/* 
                                 <RouterLink to="/disponibilidade-calendario" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
                                     <Button color="white" bg="green" _hover={{ bg: "#2A542B" }} mb={4} py={8} w="full" justifyContent="space-between">
                                         <i className="pi pi-clock" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Agendar
                                     </Button>
-                                </RouterLink>
+                                </RouterLink> */}
                                 <RouterLink to="/lista-agendamento-colaborador" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
                                     <Button color="white" bg="#8965E2" _hover={{ bg: "#493678" }} mb={4} py={8} w="full" justifyContent="space-between">
                                         <i className="pi pi-calendar-clock" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Minha Agenda
@@ -95,7 +95,7 @@ const MenuColaborador = () => {
                                     </MenuButton>
                                     <MenuList bg="#3D5A90">
                                         <MenuItem bg="#3D5A90">
-                                            <RouterLink to="/disponibilidade-filtro-calendario" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
+                                            <RouterLink to="/disponibilidade-filtro-calendario-colaborador" style={{ width: '100%', display: 'flex', justifyContent: 'center' }} onClick={onClose}>
                                                 <Button color="white" bg="#172237" _hover={{ bg: "#3D5A90" }} mb={0} py={6} w="full" justifyContent="space-between">
                                                     <i className="pi pi-filter" style={{ fontSize: '25px', verticalAlign: 'middle' }} />&nbsp;&nbsp;Disponibilidades
                                                 </Button>

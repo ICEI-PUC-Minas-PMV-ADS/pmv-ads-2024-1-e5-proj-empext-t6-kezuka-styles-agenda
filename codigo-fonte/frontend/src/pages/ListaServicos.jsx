@@ -3,11 +3,11 @@ import { ChakraProvider, Flex, Box, useToast, VStack} from '@chakra-ui/react';
 import { ScrollTop } from 'primereact/scrolltop';
 import { useNavigate } from 'react-router-dom';
 import DataGridService from '../components/common/DataGridService';
-import TitleSection from '../components/layout/TitleSection';
+import TitleSection from '../components/common/TitleSection';
 import { getServices, deleteService } from '../services/serviceService';
 import { useAuth } from '../contexts/AuthContext';
 import { useUserRedirect } from "../hooks/UseUserRedirect";
-import ActionButtons from '../components/layout/ActionButtons';
+import ActionButtons from '../components/common/ActionButtons';
 
 const ListaServicos = () => {
   const { token } = useAuth();

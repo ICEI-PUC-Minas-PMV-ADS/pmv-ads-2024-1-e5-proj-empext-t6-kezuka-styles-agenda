@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Flex, Box, VStack, useToast } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import CustomInput from '../components/layout/CustomInput';
-import TitleSection from '../components/layout/TitleSection';
+import CustomInput from '../components/common/CustomInput';
+import TitleSection from '../components/common/TitleSection';
 import { registerService } from '../services/serviceService';
 import { useAuth } from '../contexts/AuthContext';
-import ActionButtons from '../components/layout/ActionButtons';
+import ActionButtons from '../components/common/ActionButtons';
 import { useUserRedirect } from "../hooks/UseUserRedirect";
 
 const CadastroServico = () => {

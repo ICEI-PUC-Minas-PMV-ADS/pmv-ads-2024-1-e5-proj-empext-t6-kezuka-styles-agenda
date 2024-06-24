@@ -3,12 +3,12 @@ import { Calendar } from 'primereact/calendar';
 import usePrimeReactLocale from '../hooks/usePrimeReactLocale';
 import { Flex, Box, VStack, useToast, Select, Icon, Button, ChakraProvider } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
-import TitleSection from '../components/layout/TitleSection';
+import TitleSection from '../components/common/TitleSection';
 import DataGridCalendario from '../components/common/DataGridCalendario';
 import { registerCalendar } from '../services/calendarService';
 import { useAuth } from '../contexts/AuthContext';
 import { getCollaborators } from '../services/collaboratorService';
-import ActionButtons from '../components/layout/ActionButtons';
+import ActionButtons from '../components/common/ActionButtons';
 import { useUserRedirect } from "../hooks/UseUserRedirect";
 import { ScrollTop } from 'primereact/scrolltop';
 
@@ -170,7 +170,8 @@ const ProgramarDisponibilidadeCalendario = () => {
                                 value={timeInterval}
                                 placeholder="Intervalo entre horários"
                                 onChange={(e) => setTimeInterval(e.value)}
-                                showIcon style={{ fontSize: '20px' }} timeOnly
+                                  inputMode="numeric"
+                                showIcon style={{ fontSize: '20px', touchAction: 'manipulation' }} timeOnly
                                 icon={() => <i className="pi pi-clock" style={{ fontSize: '20px' }} />} />
                         </div>
                         <div className="flex-auto">
@@ -178,7 +179,7 @@ const ProgramarDisponibilidadeCalendario = () => {
                                 value={startWorkTime}
                                 placeholder="Início Expediente"
                                 onChange={(e) => setStartWorkTime(e.value)}
-                                showIcon style={{ fontSize: '20px' }} timeOnly
+                                showIcon style={{ fontSize: '20px', touchAction: 'manipulation' }} timeOnly
                                 icon={() => <i className="pi pi-clock" style={{ fontSize: '20px' }} />} />
                         </div>
                         <div className="flex-auto">
@@ -186,7 +187,7 @@ const ProgramarDisponibilidadeCalendario = () => {
                                 value={endWorkTime}
                                 placeholder="Fim Expediente"
                                 onChange={(e) => setEndWorkTime(e.value)}
-                                showIcon style={{ fontSize: '20px' }} timeOnly
+                                showIcon style={{ fontSize: '20px', touchAction: 'manipulation' }} timeOnly
                                 icon={() => <i className="pi pi-clock" style={{ fontSize: '20px' }} />} />
                         </div>
                         <div className="flex-auto">
@@ -194,7 +195,7 @@ const ProgramarDisponibilidadeCalendario = () => {
                                 value={startLunchTime}
                                 placeholder="Início Almoço"
                                 onChange={(e) => setStartLunchTime(e.value)}
-                                showIcon style={{ fontSize: '20px' }} timeOnly
+                                showIcon style={{ fontSize: '20px', touchAction: 'manipulation' }} timeOnly
                                 icon={() => <i className="pi pi-clock" style={{ fontSize: '20px' }} />} />
                         </div>
                         <div className="flex-auto">
@@ -202,7 +203,7 @@ const ProgramarDisponibilidadeCalendario = () => {
                                 value={endLunchTime}
                                 placeholder="Fim Almoço"
                                 onChange={(e) => setEndLunchTime(e.value)}
-                                showIcon style={{ fontSize: '20px' }} timeOnly
+                                showIcon style={{ fontSize: '20px', touchAction: 'manipulation' }} timeOnly
                                 icon={() => <i className="pi pi-clock" style={{ fontSize: '20px' }} />} />
                         </div>
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>

@@ -3,11 +3,11 @@ import { VStack, ChakraProvider, Flex, Box, useToast } from '@chakra-ui/react';
 import { ScrollTop } from 'primereact/scrolltop';
 import { useNavigate } from 'react-router-dom';
 import DataGridCollaborator from '../components/common/DataGridCollaborator';
-import TitleSection from '../components/layout/TitleSection';
+import TitleSection from '../components/common/TitleSection';
 import { getCollaborators, deleteCollaborator } from '../services/collaboratorService';
 import { useAuth } from '../contexts/AuthContext';
 import { useUserRedirect } from "../hooks/UseUserRedirect";
-import ActionButtons from '../components/layout/ActionButtons';
+import ActionButtons from '../components/common/ActionButtons';
 
 const ListaColaboradores = () => {
   const { token } = useAuth();

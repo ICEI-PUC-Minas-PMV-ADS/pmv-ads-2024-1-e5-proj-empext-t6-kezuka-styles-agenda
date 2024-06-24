@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Flex, Box, VStack, useToast } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import CustomInput from '../components/layout/CustomInput';
-import TitleSection from '../components/layout/TitleSection';
+import CustomInput from '../components/common/CustomInput';
+import TitleSection from '../components/common/TitleSection';
 import { registerClient } from '../services/clientService';
 import moment from 'moment-timezone';
-import ActionButtons from '../components/layout/ActionButtons';
+import ActionButtons from '../components/common/ActionButtons';
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^\d{10,11}$/;
@@ -48,8 +48,8 @@ const CadastroCliente = () => {
             toast({
                 title: "Erro de validação",
                 description: "Por favor, insira um nome válido.",
-                status: "error",
-                duration: 1000,
+                status: "info",
+                duration: 2000,
                 isClosable: true,
                 onCloseComplete: () => {
                     setIsSubmitting(false)
@@ -62,7 +62,7 @@ const CadastroCliente = () => {
             toast({
                 title: "Erro de validação",
                 description: "Por favor, insira um e-mail válido.",
-                status: "error",
+                status: "info",
                 duration: 2000,
                 isClosable: true,
                 onCloseComplete: () => {
@@ -76,7 +76,7 @@ const CadastroCliente = () => {
             toast({
                 title: "Erro de validação",
                 description: "Por favor, insira uma senha válida. A senha deve ter pelo menos 8 caracteres, incluindo pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.",
-                status: "error",
+                status: "info",
                 duration: 2000,
                 isClosable: true,
                 onCloseComplete: () => {
@@ -90,7 +90,7 @@ const CadastroCliente = () => {
             toast({
                 title: "Erro de validação",
                 description: "Por favor, insira um número de celular válido. (10 a 11 dígitos)",
-                status: "error",
+                status: "info",
                 duration: 2000,
                 isClosable: true,
                 onCloseComplete: () => {
@@ -104,8 +104,8 @@ const CadastroCliente = () => {
             toast({
                 title: "Erro de validação",
                 description: "Por favor, insira uma data de nascimento válida.",
-                status: "error",
-                duration: 1000,
+                status: "info",
+                duration: 2000,
                 isClosable: true,
                 onCloseComplete: () => {
                     setIsSubmitting(false)

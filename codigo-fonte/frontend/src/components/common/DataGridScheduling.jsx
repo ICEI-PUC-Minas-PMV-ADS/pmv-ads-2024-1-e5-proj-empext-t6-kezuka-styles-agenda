@@ -29,8 +29,19 @@ const DataGridScheduling = ({ data, onRowClick }) => {
         return dateA - dateB;
     });
 
+    const getStatusColor = (statusDescricao) => {
+        switch (statusDescricao) {
+            case 'CANCELADO':
+                return 'red';
+            case 'CONCLUÍDO':
+                return 'purple';
+            case 'AGENDADO':
+                return 'green';
+        }
+    };
+
     return (
-        <TableContainer maxHeight="auto" overflowY="auto">
+        <TableContainer maxHeight="400px" overflowY="auto">
             <Table size='md'>
                 <Thead position="sticky" top={0} bg="white" zIndex={1}>
                     <Tr align="center">
@@ -50,8 +61,8 @@ const DataGridScheduling = ({ data, onRowClick }) => {
                             <i className="pi pi-tag" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'green' }} />
                             &nbsp;&nbsp;Status
                         </Th>
-                        {isEditable && <Th><i className="pi pi-file-edit" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'green' }} /></Th>}
-                        {isEditable && <Th><i className="pi pi-trash" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'red' }} /></Th>}
+                        {/* {isEditable && <Th><i className="pi pi-file-edit" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'green' }} /></Th>}
+                        {isEditable && <Th><i className="pi pi-trash" style={{ fontSize: '20px', verticalAlign: 'middle', color: 'red' }} /></Th>} */}
                     </Tr>
                 </Thead>
                 <Tbody>
@@ -71,7 +82,7 @@ const DataGridScheduling = ({ data, onRowClick }) => {
                             </Td>
                             <Td fontSize="16px" color="#3D5A73" fontWeight="bold" alignItems="center">
                                 <Badge 
-                                    colorScheme={item.statusDescricao === "CANCELADO" ? "red" : "green"} 
+                                    colorScheme={getStatusColor(item.statusDescricao)} 
                                     mb={0} 
                                     borderRadius="full" 
                                     px={2} 

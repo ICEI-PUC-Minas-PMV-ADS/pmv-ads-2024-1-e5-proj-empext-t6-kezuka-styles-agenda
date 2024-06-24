@@ -4,11 +4,11 @@ import usePrimeReactLocale from '../hooks/usePrimeReactLocale';
 import { Flex, Box, VStack, useToast, Select, ChakraProvider, Icon, Button } from '@chakra-ui/react';
 import { AddIcon } from '@chakra-ui/icons';
 import DataGridCalendario from '../components/common/DataGridCalendario';
-import TitleSection from '../components/layout/TitleSection';
+import TitleSection from '../components/common/TitleSection';
 import { registerCalendar } from '../services/calendarService';
 import { useAuth } from '../contexts/AuthContext';
 import { getCollaborators } from '../services/collaboratorService';
-import ActionButtons from '../components/layout/ActionButtons';
+import ActionButtons from '../components/common/ActionButtons';
 import { useUserRedirect } from "../hooks/UseUserRedirect";
 import { ScrollTop } from 'primereact/scrolltop';
 
@@ -166,7 +166,7 @@ const CustomizarDisponibilidadeCalendario = () => {
                             <Calendar
                                 value={selectedHour}
                                 onChange={(e) => setSelectedHour(e.value)}
-                                showIcon style={{ fontSize: '20px' }} timeOnly
+                                showIcon style={{ fontSize: '20px', touchAction: 'manipulation' }} timeOnly
                                 icon={() => <i className="pi pi-clock" style={{ fontSize: '20px' }} />} />
                         </div>
                         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
