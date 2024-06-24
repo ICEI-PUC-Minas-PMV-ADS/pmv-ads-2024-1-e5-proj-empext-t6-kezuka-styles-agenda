@@ -103,7 +103,7 @@ Critério de Êxito | Login de colaborador realizado com sucesso
 
 # Lista de Clientes
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/2ec635c5-f232-4c68-b590-18f7c211faf2"></img>
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/ef3a6c2f-a3f4-4214-9181-a000c2013f41"></img>
 
 # Registrar disponibilidade do colaborador
 
