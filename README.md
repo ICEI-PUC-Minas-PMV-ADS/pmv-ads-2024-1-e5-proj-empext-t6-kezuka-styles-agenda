@@ -25,7 +25,11 @@ A Agenda online do cliente Kezuka Style's facilitará muito a vida dos clientes 
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Acesse a primeira versão do sistema pelo:
+
+agenda.kezukastyles.com.br
+acesso gestor: gabrielnakata@gmail.com
+senha: acesso
 
 # Documentação
 
