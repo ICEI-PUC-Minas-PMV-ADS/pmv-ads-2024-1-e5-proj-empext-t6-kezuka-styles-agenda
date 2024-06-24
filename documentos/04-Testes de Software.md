@@ -95,11 +95,11 @@ Requisito Associado RF-012 - Permitir que o colaborador faça login;
 Objetivo do Teste | Verificar login de colaborador
 Critério de Êxito | Login de colaborador realizado com sucesso
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/b9be372d-b9d7-43e2-8816-7079dcd65ec3"></img>
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/988d443c-1977-4d03-99b2-c8bb9aec6e6a"></img>
 
 # Menu do Gestor
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/c9669dad-4cd0-445c-b70e-5f7a45f1a86f"></img>
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/b9be372d-b9d7-43e2-8816-7079dcd65ec3"></img>
 
 # Lista de Clientes
 
