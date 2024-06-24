@@ -147,7 +147,7 @@ Objetivo do Teste | Verificar configuração de porcentagem pelo gestor
 Critério de Êxito | Porcentagem adicionadas a um colaborador.
 
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/046c809f-4567-4b43-8b55-87fb5d763820"></img>
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/a820a420-9a77-40be-86da-3967a1f62ecb"></img>
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/375a8ff4-4633-494b-b33c-fc3f1f94c715"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/3403f87f-ae96-459a-a378-f6776fd691f2"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/94212410-4cc5-4c40-b455-676b1b5d557d"></img>
 <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/74f76bd5-1a6a-4ceb-ad1b-59a1ed5e0fd0"></img>
