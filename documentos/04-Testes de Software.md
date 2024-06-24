@@ -126,7 +126,7 @@ Critério de Êxito | Colaborador cadastrado com sucesso
 
 # Lista de Colaboradores
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/fc2a31b1-1a97-4026-b127-6fce117682aa"></img>
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda/assets/86859418/04c3b32e-c3d9-43b6-9a5c-7e9e1c8c4a99"></img>
 
 # Atualização de dados dos colaboradores
 
