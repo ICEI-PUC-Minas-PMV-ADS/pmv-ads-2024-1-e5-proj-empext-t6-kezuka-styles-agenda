@@ -1,19 +1,19 @@
 # Implantação do Software
 
-## Planejamento da Implantação 
+ Planejamento da Implantação 
 
 A implantação do software foi meticulosamente planejada, envolvendo a descrição das tecnologias utilizadas e o processo de implementação. A seguir, detalhamos os aspectos-chave desse planejamento:
 
-## Tecnologias Utilizadas
+ Tecnologias Utilizadas
 
 ASP-NET API REST | ENTITY FRAMEWORK | MIGRATION | SQLSERVER | Deploy Back-end + DB em VM via FTP (File Transfer Protocol).
 REACT NATIVE + VITE | Deploy via github in gh-pages and Vercel.
 
-# Processo de Implantação
+ Processo de Implantação
 
-## A implantação da aplicação seguiu um processo cuidadosamente elaborado, garantindo sua estabilidade e disponibilidade. Utilizamos plataformas de hospedagem confiáveis para garantir que a aplicação esteja sempre acessível. Atualmente, a API está disponível online no endereço "https://api.kezukastyles.com.br" e a documentação pode ser encontrada em [https://find-ong-api.onrender.com/docs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda).
+ A implantação da aplicação seguiu um processo cuidadosamente elaborado, garantindo sua estabilidade e disponibilidade. Utilizamos plataformas de hospedagem confiáveis para garantir que a aplicação esteja sempre acessível. Atualmente, a API está disponível online no endereço "https://api.kezukastyles.com.br" e a documentação pode ser encontrada em [https://find-ong-api.onrender.com/docs](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-empext-t6-kezuka-styles-agenda).
 
-# Planejamento de Evolução da Aplicação
+ Planejamento de Evolução da Aplicação
 
  O desenvolvimento da aplicação está em constante evolução, visando oferecer uma experiência ainda mais completa e satisfatória aos usuários. As próximas etapas do planejamento incluem:
 
