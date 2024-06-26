@@ -28,7 +28,7 @@ A Agenda online do cliente Kezuka Style's facilitará muito a vida dos clientes 
 Acesse a primeira versão do sistema pelo:
 
 agenda.kezukastyles.com.br
-acesso gestor: gabrielnakata@gmail.com
+acesso gestor: joycepuc@gmail.com
 senha: acesso
 
 # Documentação
