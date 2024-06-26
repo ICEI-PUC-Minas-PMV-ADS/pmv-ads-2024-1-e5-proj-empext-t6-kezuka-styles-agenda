@@ -45,13 +45,10 @@ senha: acesso
 
 <li><a href="src/README.md"> Código Fonte</a></li>
 
-# Apresentação
-
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
-## Vídeo de Apresentação
+## Apresentação
 
 [![Vídeo de Demonstração](https://img.youtube.com/vi/CLZ1HaTo9ko/0.jpg)](https://www.youtube.com/watch?v=CLZ1HaTo9ko&t=553s)
 
-## Vídeos de Depoimento
+## Depoimento
 
 [![Vídeo de Demonstração](https://img.youtube.com/vi/2NXE7y_LTIA/0.jpg)](https://www.youtube.com/watch?v=2NXE7y_LTIA)
