@@ -25,11 +25,11 @@ export const TopBar = () => {
   return (
     <div className={styles.topBar}>
       <nav>
-        <Link to='/'>Kezuka Styles</Link>
+        <Link to='/'><img src="./src/img/logoTop.jpeg" alt="" /></Link>
         <div ref={ref}>
-          <button onClick={() => setIsOpen(!isOpen)}>
-            <IoMenu />
-          </button>
+            <button onClick={() => setIsOpen(!isOpen)}>
+              <IoMenu />
+            </button>
           {isOpen && (
             <div className={styles.topbarMenu}>
               <ButtonLink to='/entrar'>Entre <IoLogInOutline /></ButtonLink>
